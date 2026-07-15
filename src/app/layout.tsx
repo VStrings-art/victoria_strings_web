@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Petit_Formal_Script } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${display.variable} ${sans.variable} ${script.variable} font-sans bg-white text-ink-800 antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

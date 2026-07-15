@@ -32,3 +32,6 @@ next-env.d.ts
 /site-db.sql
 *.sql.gz
 *.tar.gz
+
+# Claude Code internal state
+.claude/
