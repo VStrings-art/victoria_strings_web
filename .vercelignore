@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+
+site-files/
+site-db.sql
+*.sql.gz
+*.tar.gz
+
+.DS_Store

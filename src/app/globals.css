@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: theme("colors.gold.300");
+    color: theme("colors.ink.900");
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    @apply text-xs font-semibold tracking-widest2 uppercase text-gold-600 font-sans;
+  }
+
+  .prose-body {
+    @apply font-sans text-base leading-relaxed text-ink-500;
+  }
+
+  .card {
+    @apply bg-white rounded-sm border border-ink-100 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3 text-sm font-semibold tracking-wide text-ink-900 shadow-sm transition-colors hover:bg-gold-400;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/50 px-7 py-3 text-sm font-semibold tracking-wide text-white transition-colors hover:border-gold-300 hover:text-gold-300;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl font-medium text-ink-900 leading-tight;
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom 10s ease-in-out infinite alternate;
+}
+
+@keyframes carousel-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-carousel-progress {
+  animation: carousel-progress 6s linear forwards;
+}
+
+@keyframes caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-caption-in {
+  animation: caption-in 0.55s ease forwards;
+}
