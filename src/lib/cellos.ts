@@ -5,8 +5,8 @@ export const cellos: Instrument[] = [
     slug: "cello-01",
     title: "Cello 01",
     images: [
-      "/images/2026/02/cello1_front.png",
       "/images/2026/02/cello1_back.png",
+      "/images/2026/02/cello1_front.png",
       "/images/2026/02/cello1_head.png",
     ],
     caption:
