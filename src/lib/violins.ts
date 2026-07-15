@@ -89,12 +89,12 @@ export const violins: Instrument[] = [
     caption: "Warm amber varnish with vibrant flame, delivering rich tone and focused projection.",
   },
   {
-    slug: "amati-01",
-    title: "Amati 01",
+    slug: "violin-1",
+    title: "Violin 1",
     images: [
-      "/images/2026/violins/violin_1/amati1_front.png",
-      "/images/2026/violins/violin_1/amati1_back.png",
-      "/images/2026/violins/violin_1/amati1_head.png",
+      "/images/2026/violins/violin_1/violin1_back.png",
+      "/images/2026/violins/violin_1/violin1_front.png",
+      "/images/2026/violins/violin_1/violin1_head.png",
     ],
     caption:
       "Vivid tiger-flame maple back beneath a warm honey-amber varnish - offering rich resonance, clear projection, and singing warmth across every register.",
