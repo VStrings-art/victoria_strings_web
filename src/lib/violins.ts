@@ -4,6 +4,17 @@ export type { Instrument };
 
 export const violins: Instrument[] = [
   {
+    slug: "violin-8",
+    title: "Violin 8",
+    images: [
+      "/images/2026/violins/violin_8/violin8_front.png",
+      "/images/2026/violins/violin_8/violin8_back.png",
+      "/images/2026/violins/violin_8/violin8_head.png",
+    ],
+    caption:
+      "Elegant, evenly-toned flame maple beneath a warm honeyed varnish - delivering classic character with clear articulation and poised, confident projection.",
+  },
+  {
     slug: "158592",
     title: "Professional Violin",
     images: [
