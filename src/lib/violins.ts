@@ -103,8 +103,8 @@ export const violins: Instrument[] = [
     slug: "violin-2",
     title: "Violin 2",
     images: [
-      "/images/2026/violins/violin_2/violin2_front.png",
       "/images/2026/violins/violin_2/violin2_back.png",
+      "/images/2026/violins/violin_2/violin2_front.png",
       "/images/2026/violins/violin_2/violin2_head.png",
     ],
     caption:
@@ -147,8 +147,8 @@ export const violins: Instrument[] = [
     slug: "violin-6",
     title: "Violin 6",
     images: [
-      "/images/2026/violins/violin_6/violin6_front.png",
       "/images/2026/violins/violin_6/violin6_back.png",
+      "/images/2026/violins/violin_6/violin6_front.png",
       "/images/2026/violins/violin_6/violin6_head.png",
     ],
     caption:
