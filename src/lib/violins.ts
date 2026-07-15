@@ -125,8 +125,8 @@ export const violins: Instrument[] = [
     slug: "violin-4",
     title: "Violin 4",
     images: [
-      "/images/2026/violins/violin_4/violin4_front.png",
       "/images/2026/violins/violin_4/violin4_back.png",
+      "/images/2026/violins/violin_4/violin4_front.png",
       "/images/2026/violins/violin_4/violin4_head.png",
     ],
     caption:
