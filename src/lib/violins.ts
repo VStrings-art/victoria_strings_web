@@ -28,8 +28,8 @@ export const violins: Instrument[] = [
     slug: "cremonese-01",
     title: "Cremonese 01",
     images: [
-      "/images/2025/11/bao_A_f.png",
       "/images/2025/11/bao_A_b.png",
+      "/images/2025/11/bao_A_f.png",
       "/images/2025/11/bao_A_s.png",
     ],
     caption:
