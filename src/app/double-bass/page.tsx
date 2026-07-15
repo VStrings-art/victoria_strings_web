@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import FramedIntroSection from "@/components/FramedIntroSection";
 import CollectionSection from "@/components/CollectionSection";
+import { doubleBasses } from "@/lib/double-basses";
 
 export const metadata: Metadata = {
   title: "Double Basses | Victoria Strings London",
@@ -26,10 +27,11 @@ const cards = [
   },
 ];
 
-const doubleBasses = [
-  { slug: "doublebass-01", image: "/images/2026/03/doublebass1_front.png", alt: "Double Bass 01" },
-  { slug: "doublebass-02", image: "/images/2026/03/doublebass2_back.png", alt: "Double Bass 02" },
-];
+const collectionItems = doubleBasses.map((d) => ({
+  slug: d.slug,
+  image: d.images[0],
+  alt: d.title,
+}));
 
 export default function DoubleBassPage() {
   return (
@@ -49,7 +51,7 @@ export default function DoubleBassPage() {
           label="Our Collection"
           title="Double Basses with Depth, Power & Structural Integrity"
           basePath="/double-bass"
-          items={doubleBasses}
+          items={collectionItems}
         />
       </main>
       <Footer />

@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import MasterFeaturesSection from "@/components/MasterFeaturesSection";
 import CinematicHero from "@/components/CinematicHero";
 import CollectionSection from "@/components/CollectionSection";
+import { violins } from "@/lib/violins";
 
 export const metadata: Metadata = {
   title: "Violins | Victoria Strings London",
@@ -30,28 +31,11 @@ const features = [
   },
 ];
 
-const violins = [
-  { slug: "158592", image: "/images/2025/11/xsh_f.png", alt: "Professional Violin" },
-  { slug: "cremonese-01", image: "/images/2025/11/bao_A_f.png", alt: "Cremonese 01 violin" },
-  {
-    slug: "messiah-01",
-    image: "/images/2025/11/Screenshot-2025-11-15-at-18.59.27-scaled.png",
-    alt: "Messiah 01 violin",
-  },
-  { slug: "messiah-02", image: "/images/2026/03/messiah2_front.png", alt: "Messiah 02 violin" },
-  {
-    slug: "cremonese-02",
-    image: "/images/2026/03/cremonese2_front-scaled.png",
-    alt: "Cremonese 02 violin",
-  },
-  { slug: "messiah-03", image: "/images/2025/11/gu_f.png", alt: "Messiah 03 violin" },
-  { slug: "messiah-04", image: "/images/2025/11/ping_f.png", alt: "Messiah 04 violin" },
-  {
-    slug: "cremonese-03",
-    image: "/images/2026/03/cremonese03_back-scaled.png",
-    alt: "Cremonese 03 violin",
-  },
-];
+const collectionItems = violins.map((v) => ({
+  slug: v.slug,
+  image: v.images[0],
+  alt: v.title,
+}));
 
 export default function ViolinPage() {
   return (
@@ -75,7 +59,7 @@ export default function ViolinPage() {
           label="Our Collection"
           title="Fine Violins, Hand-Selected for Excellence"
           basePath="/violin"
-          items={violins}
+          items={collectionItems}
         />
       </main>
       <Footer />

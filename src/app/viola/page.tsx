@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import IntroSection from "@/components/IntroSection";
 import SplitSection from "@/components/SplitSection";
 import CollectionSection from "@/components/CollectionSection";
+import { violas } from "@/lib/violas";
 
 export const metadata: Metadata = {
   title: "Violas | Victoria Strings London",
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
     "Refined violas, balanced in depth and character — handcrafted by Victoria Strings London's network of master luthiers.",
 };
 
-const violas = [
-  { slug: "viola-01", image: "/images/2026/02/viola1_front.png", alt: "Viola 01" },
-  { slug: "viola-02", image: "/images/2026/02/viola2_front-scaled.png", alt: "Viola 02" },
-  { slug: "viola-03", image: "/images/2026/02/viola3_back-scaled.png", alt: "Viola 03" },
-];
+const collectionItems = violas.map((v) => ({
+  slug: v.slug,
+  image: v.images[0],
+  alt: v.title,
+}));
 
 export default function ViolaPage() {
   return (
@@ -53,7 +54,7 @@ export default function ViolaPage() {
           label="Our Collection"
           title="Refined Violas, Balanced in Depth and Character"
           basePath="/viola"
-          items={violas}
+          items={collectionItems}
         />
       </main>
       <Footer />

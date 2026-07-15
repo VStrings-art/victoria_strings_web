@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CinematicOverlaySection from "@/components/CinematicOverlaySection";
 import CollectionSection from "@/components/CollectionSection";
+import { cellos } from "@/lib/cellos";
 
 export const metadata: Metadata = {
   title: "Cellos | Victoria Strings London",
@@ -28,10 +29,11 @@ const frames = [
   },
 ];
 
-const cellos = [
-  { slug: "cello-01", image: "/images/2026/02/cello1_front.png", alt: "Cello 01" },
-  { slug: "cello-02", image: "/images/2026/02/cello2_front.png", alt: "Cello 02" },
-];
+const collectionItems = cellos.map((c) => ({
+  slug: c.slug,
+  image: c.images[0],
+  alt: c.title,
+}));
 
 export default function CelloPage() {
   return (
@@ -47,7 +49,7 @@ export default function CelloPage() {
           label="Our Collection"
           title="Refined Cellos with Presence, Balance & Authority"
           basePath="/cello"
-          items={cellos}
+          items={collectionItems}
         />
       </main>
       <Footer />
