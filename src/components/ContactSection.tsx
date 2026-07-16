@@ -1,4 +1,41 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
+
+const WEB3FORMS_ACCESS_KEY = "4e69d7b4-fd9c-4648-b5cb-78826ed514a2";
+
+type Status = "idle" | "submitting" | "success" | "error";
+
 export default function ContactSection() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "New enquiry from victoriastrings.com");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact" className="w-full bg-[#f4f1ed] py-20 font-display">
       <div className="mx-auto flex max-w-[1300px] flex-col gap-10 px-6 md:flex-row md:gap-20 md:px-[60px]">
@@ -55,7 +92,10 @@ export default function ContactSection() {
         </div>
 
         <div className="md:flex-1">
-          <form className="rounded-[18px] bg-white px-8 py-9 shadow-[0_16px_40px_rgba(0,0,0,0.07)] md:px-10">
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-[18px] bg-white px-8 py-9 shadow-[0_16px_40px_rgba(0,0,0,0.07)] md:px-10"
+          >
             <div className="mb-4">
               <label
                 className="mb-2 block text-[14px] font-bold tracking-[0.16em] text-[#222] uppercase"
@@ -69,6 +109,7 @@ export default function ContactSection() {
                 type="text"
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
                 placeholder="Your name"
+                required
               />
             </div>
             <div className="mb-4">
@@ -84,6 +125,7 @@ export default function ContactSection() {
                 type="email"
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
                 placeholder="you@example.com"
+                required
               />
             </div>
             <div className="mb-5">
@@ -99,14 +141,30 @@ export default function ContactSection() {
                 rows={5}
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
                 placeholder="Tell us what you're looking for"
+                required
               />
             </div>
-            <a
-              href="mailto:sales@victoriastrings.com"
-              className="inline-flex items-center justify-center rounded-full bg-[#7b1d1b] px-9 py-2.5 text-[13px] tracking-[0.18em] text-white uppercase transition-[background-color,transform,box-shadow] hover:-translate-y-px hover:bg-[#5d1513] hover:shadow-[0_10px_24px_rgba(0,0,0,0.12)]"
+            <button
+              type="submit"
+              disabled={status === "submitting"}
+              className="inline-flex items-center justify-center rounded-full bg-[#7b1d1b] px-9 py-2.5 text-[13px] tracking-[0.18em] text-white uppercase transition-[background-color,transform,box-shadow] hover:-translate-y-px hover:bg-[#5d1513] hover:shadow-[0_10px_24px_rgba(0,0,0,0.12)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
             >
-              Send Message
-            </a>
+              {status === "submitting" ? "Sending…" : "Send Message"}
+            </button>
+            {status === "success" && (
+              <p className="mt-4 text-[15px] font-medium text-[#3a6b3a]">
+                Thank you — your message has been sent. We&apos;ll be in touch soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
+                Something went wrong sending your message. Please email us directly at{" "}
+                <a href="mailto:sales@victoriastrings.com" className="underline">
+                  sales@victoriastrings.com
+                </a>
+                .
+              </p>
+            )}
           </form>
         </div>
       </div>
