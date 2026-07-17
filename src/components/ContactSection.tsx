@@ -4,17 +4,33 @@ import { useState, type FormEvent } from "react";
 
 const WEB3FORMS_ACCESS_KEY = "4e69d7b4-fd9c-4648-b5cb-78826ed514a2";
 
-type Status = "idle" | "submitting" | "success" | "error";
+type Status = "idle" | "submitting" | "success" | "error" | "flagged";
 
 export default function ContactSection() {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("submitting");
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    // Honeypot: bots tend to fill every field, real visitors never see or touch this one.
+    if (String(formData.get("botcheck") ?? "").length > 0) {
+      setStatus("success");
+      form.reset();
+      return;
+    }
+
+    const message = String(formData.get("message") ?? "");
+    const urlCount = (message.match(/https?:\/\//gi) ?? []).length;
+    if (urlCount >= 2) {
+      setStatus("flagged");
+      return;
+    }
+
+    setStatus("submitting");
+    formData.delete("botcheck");
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "New enquiry from victoriastrings.com");
 
@@ -96,6 +112,14 @@ export default function ContactSection() {
             onSubmit={handleSubmit}
             className="rounded-[18px] bg-white px-8 py-9 shadow-[0_16px_40px_rgba(0,0,0,0.07)] md:px-10"
           >
+            <input
+              type="text"
+              name="botcheck"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="absolute -left-[9999px] h-0 w-0 opacity-0"
+            />
             <div className="mb-4">
               <label
                 className="mb-2 block text-[14px] font-bold tracking-[0.16em] text-[#222] uppercase"
@@ -159,6 +183,16 @@ export default function ContactSection() {
             {status === "error" && (
               <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
                 Something went wrong sending your message. Please email us directly at{" "}
+                <a href="mailto:sales@victoriastrings.com" className="underline">
+                  sales@victoriastrings.com
+                </a>
+                .
+              </p>
+            )}
+            {status === "flagged" && (
+              <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
+                Your message contains multiple links and couldn&apos;t be sent automatically.
+                Please email us directly at{" "}
                 <a href="mailto:sales@victoriastrings.com" className="underline">
                   sales@victoriastrings.com
                 </a>
