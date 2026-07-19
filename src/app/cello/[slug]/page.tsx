@@ -4,7 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InstrumentCarousel from "@/components/InstrumentCarousel";
 import ContactSection from "@/components/ContactSection";
+import RelatedInstruments from "@/components/RelatedInstruments";
 import { cellos, getCello } from "@/lib/cellos";
+import { getRelated } from "@/lib/related";
 
 export function generateStaticParams() {
   return cellos.map((c) => ({ slug: c.slug }));
@@ -31,11 +33,14 @@ export default async function CelloDetailPage({
   const cello = getCello(slug);
   if (!cello) notFound();
 
+  const related = getRelated(cellos, slug);
+
   return (
     <>
       <Header />
       <main>
         <InstrumentCarousel images={cello.images} caption={cello.caption} />
+        <RelatedInstruments title="More Cellos to Explore" basePath="/cello" items={related} />
         <ContactSection />
       </main>
       <Footer />

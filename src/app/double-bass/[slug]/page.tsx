@@ -4,7 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InstrumentCarousel from "@/components/InstrumentCarousel";
 import ContactSection from "@/components/ContactSection";
+import RelatedInstruments from "@/components/RelatedInstruments";
 import { doubleBasses, getDoubleBass } from "@/lib/double-basses";
+import { getRelated } from "@/lib/related";
 
 export function generateStaticParams() {
   return doubleBasses.map((d) => ({ slug: d.slug }));
@@ -33,11 +35,18 @@ export default async function DoubleBassDetailPage({
   const doubleBass = getDoubleBass(slug);
   if (!doubleBass) notFound();
 
+  const related = getRelated(doubleBasses, slug);
+
   return (
     <>
       <Header />
       <main>
         <InstrumentCarousel images={doubleBass.images} caption={doubleBass.caption} />
+        <RelatedInstruments
+          title="More Double Basses to Explore"
+          basePath="/double-bass"
+          items={related}
+        />
         <ContactSection />
       </main>
       <Footer />

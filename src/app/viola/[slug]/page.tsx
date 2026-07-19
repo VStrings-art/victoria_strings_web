@@ -4,7 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InstrumentCarousel from "@/components/InstrumentCarousel";
 import ContactSection from "@/components/ContactSection";
+import RelatedInstruments from "@/components/RelatedInstruments";
 import { violas, getViola } from "@/lib/violas";
+import { getRelated } from "@/lib/related";
 
 export function generateStaticParams() {
   return violas.map((v) => ({ slug: v.slug }));
@@ -31,11 +33,14 @@ export default async function ViolaDetailPage({
   const viola = getViola(slug);
   if (!viola) notFound();
 
+  const related = getRelated(violas, slug);
+
   return (
     <>
       <Header />
       <main>
         <InstrumentCarousel images={viola.images} caption={viola.caption} />
+        <RelatedInstruments title="More Violas to Explore" basePath="/viola" items={related} />
         <ContactSection />
       </main>
       <Footer />
