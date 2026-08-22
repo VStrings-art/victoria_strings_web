@@ -44,6 +44,39 @@ export const cellos: Instrument[] = [
     caption:
       "Antiqued honey-amber varnish over a delicately flamed back, capturing time-worn character with warm, resonant depth.",
   },
+  {
+    slug: "cello-05",
+    title: "Cello 05",
+    images: [
+      "/images/2026/cellos/cello5_Mara/cello5_back.png",
+      "/images/2026/cellos/cello5_Mara/cello5_front.png",
+      "/images/2026/cellos/cello5_Mara/cello5_head.png",
+    ],
+    caption:
+      "A faithful copy of the legendary 1711 “Mara” Stradivari, its broadly flamed maple back glowing beneath warm amber antiquing, with deep resonance and a full, singing voice.",
+  },
+  {
+    slug: "cello-06",
+    title: "Cello 06",
+    images: [
+      "/images/2026/cellos/cello6_Davidoff/cello6_front.png",
+      "/images/2026/cellos/cello6_Davidoff/cello6_back.png",
+      "/images/2026/cellos/cello6_Davidoff/cello6_head.png",
+    ],
+    caption:
+      "A faithful copy of the celebrated 1712 “Davidoff” Stradivari, its softly flamed maple veiled in deep chestnut-red antiquing, delivering dark warmth and commanding projection.",
+  },
+  {
+    slug: "cello-07",
+    title: "Cello 07",
+    images: [
+      "/images/2026/cellos/cello7/cello7_back.png",
+      "/images/2026/cellos/cello7/cello7_front.png",
+      "/images/2026/cellos/cello7/cello7_head.png",
+    ],
+    caption:
+      "Luminous golden-orange varnish over finely flamed maple, offering bright clarity, quick response, and a warm, open voice.",
+  },
 ];
 
 export function getCello(slug: string): Instrument | undefined {

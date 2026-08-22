@@ -4,6 +4,28 @@ export type { Instrument };
 
 export const violins: Instrument[] = [
   {
+    slug: "violin-9",
+    title: "Violin 9",
+    images: [
+      "/images/2026/violins/violin_9/violin9_back.png",
+      "/images/2026/violins/violin_9/violin9_front.png",
+      "/images/2026/violins/violin_9/violin9_head.png",
+    ],
+    caption:
+      "Bold horizontal flame aglow beneath warm golden-brown antiquing - offering a rich, resonant core with focused clarity and confident projection.",
+  },
+  {
+    slug: "violin-10",
+    title: "Violin 10",
+    images: [
+      "/images/2026/violins/violin_10/violin10_back.png",
+      "/images/2026/violins/violin_10/violin10_front.png",
+      "/images/2026/violins/violin_10/violin10_head.png",
+    ],
+    caption:
+      "Softly figured maple beneath a mellow chestnut-gold varnish - producing a warm, rounded tone with even response across every register.",
+  },
+  {
     slug: "violin-8",
     title: "Violin 8",
     images: [
