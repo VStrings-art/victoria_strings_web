@@ -16,8 +16,8 @@ export const cellos: Instrument[] = [
     slug: "cello-06",
     title: "Cello 06",
     images: [
-      "/images/2026/cellos/cello6_Davidoff/cello6_front.png",
       "/images/2026/cellos/cello6_Davidoff/cello6_back.png",
+      "/images/2026/cellos/cello6_Davidoff/cello6_front.png",
       "/images/2026/cellos/cello6_Davidoff/cello6_head.png",
     ],
     caption:
@@ -27,8 +27,8 @@ export const cellos: Instrument[] = [
     slug: "cello-07",
     title: "Cello 07",
     images: [
-      "/images/2026/cellos/cello7/cello7_back.png",
       "/images/2026/cellos/cello7/cello7_front.png",
+      "/images/2026/cellos/cello7/cello7_back.png",
       "/images/2026/cellos/cello7/cello7_head.png",
     ],
     caption:
