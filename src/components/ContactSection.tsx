@@ -6,7 +6,7 @@ const WEB3FORMS_ACCESS_KEY = "4e69d7b4-fd9c-4648-b5cb-78826ed514a2";
 
 type Status = "idle" | "submitting" | "success" | "error" | "flagged";
 
-export default function ContactSection() {
+export default function ContactSection({ instrument }: { instrument?: string }) {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -32,7 +32,12 @@ export default function ContactSection() {
     setStatus("submitting");
     formData.delete("botcheck");
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", "New enquiry from victoriastrings.com");
+    formData.append(
+      "subject",
+      instrument
+        ? `Enquiry: ${instrument} — victoriastrings.com`
+        : "New enquiry from victoriastrings.com",
+    );
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -57,10 +62,18 @@ export default function ContactSection() {
       <div className="mx-auto flex max-w-[1300px] flex-col gap-10 px-6 md:flex-row md:gap-20 md:px-[60px]">
         <div className="md:flex-1">
           <h2 className="mb-[18px] text-[28px] tracking-[0.16em] text-[#1f1b18] uppercase md:text-[42px]">
-            Contact Us
+            {instrument ? "Enquire" : "Contact Us"}
           </h2>
           <p className="mb-[26px] text-[17px] leading-[1.7] text-[#3a3733]">
-            Here is how you can contact us for any questions.
+            {instrument ? (
+              <>
+                Interested in <span className="font-semibold">{instrument}</span>? Send us a
+                message and we will come back to you with full details, price and
+                availability &mdash; or arrange a trial in London.
+              </>
+            ) : (
+              "Here is how you can contact us for any questions."
+            )}
           </p>
 
           <div className="mb-[30px] h-0.5 w-[70px] bg-[#7b1d1b]" />
@@ -120,6 +133,7 @@ export default function ContactSection() {
               aria-hidden="true"
               className="absolute -left-[9999px] h-0 w-0 opacity-0"
             />
+            {instrument && <input type="hidden" name="instrument" value={instrument} />}
             <div className="mb-4">
               <label
                 className="mb-2 block text-[14px] font-bold tracking-[0.16em] text-[#222] uppercase"
@@ -165,6 +179,11 @@ export default function ContactSection() {
                 rows={5}
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
                 placeholder="Tell us what you're looking for"
+                defaultValue={
+                  instrument
+                    ? `I would like to know more about ${instrument} — price, specifications and availability for a trial.`
+                    : undefined
+                }
                 required
               />
             </div>

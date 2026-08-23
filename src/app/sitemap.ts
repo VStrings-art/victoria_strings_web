@@ -9,7 +9,14 @@ export const dynamic = "force-static";
 const BASE_URL = "https://victoriastrings.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/violin", "/viola", "/cello", "/double-bass"].map((path) => ({
+  const staticRoutes = [
+    "",
+    "/violin",
+    "/viola",
+    "/cello",
+    "/double-bass",
+    "/luthiers",
+  ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
   }));

@@ -5,22 +5,22 @@ const categories = [
   {
     label: "Violins",
     href: "/violin",
-    image: "/images/2025/05/pexels-photo-7095506-7095506-scaled.jpg",
+    image: "/images/2025/05/pexels-photo-7095506-7095506-scaled.webp",
   },
   {
     label: "Violas",
     href: "/viola",
-    image: "/images/2025/09/Screenshot-2025-09-16-at-17.21.25.png",
+    image: "/images/2025/09/Screenshot-2025-09-16-at-17.21.25.webp",
   },
   {
     label: "Cellos",
     href: "/cello",
-    image: "/images/2025/09/Screenshot-2025-09-17-at-17.57.17.png",
+    image: "/images/2025/09/Screenshot-2025-09-17-at-17.57.17.webp",
   },
   {
     label: "Double Basses",
     href: "/double-bass",
-    image: "/images/2025/09/Screenshot-2025-09-17-at-18.15.30.png",
+    image: "/images/2025/09/Screenshot-2025-09-17-at-18.15.30.webp",
   },
 ];
 

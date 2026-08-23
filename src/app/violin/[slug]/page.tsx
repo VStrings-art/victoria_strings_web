@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import RelatedInstruments from "@/components/RelatedInstruments";
 import { violins, getViolin } from "@/lib/violins";
 import { getRelated } from "@/lib/related";
+import { instrumentMetadata, instrumentSchema } from "@/lib/instrument-seo";
 
 export function generateStaticParams() {
   return violins.map((v) => ({ slug: v.slug }));
@@ -19,9 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const violin = getViolin(slug);
-  return {
-    title: violin ? `${violin.title} | Victoria Strings London` : "Violin | Victoria Strings London",
-  };
+  return instrumentMetadata(violin, "Violin", "/violin");
 }
 
 export default async function ViolinDetailPage({
@@ -39,9 +38,15 @@ export default async function ViolinDetailPage({
     <>
       <Header />
       <main>
-        <InstrumentCarousel images={violin.images} caption={violin.caption} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(instrumentSchema(violin, "Violin", "/violin")),
+          }}
+        />
+        <InstrumentCarousel images={violin.images} caption={violin.caption} title={violin.title} />
         <RelatedInstruments title="More Violins to Explore" basePath="/violin" items={related} />
-        <ContactSection />
+        <ContactSection instrument={violin.title} />
       </main>
       <Footer />
     </>

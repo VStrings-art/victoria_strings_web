@@ -10,6 +10,7 @@ const links = [
   { href: "/viola", label: "Viola" },
   { href: "/cello", label: "Cello" },
   { href: "/double-bass", label: "Double Bass" },
+  { href: "/luthiers", label: "Luthiers" },
 ];
 
 export default function Header() {
@@ -36,7 +37,7 @@ export default function Header() {
       >
         <Link href="/" className="block">
           <Image
-            src="/images/2026/02/VS_Logo_transparent.png"
+            src="/images/2026/02/VS_Logo_transparent.webp"
             alt="Victoria Strings"
             width={220}
             height={124}

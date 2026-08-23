@@ -39,7 +39,7 @@ export default function Footer() {
         className="absolute inset-x-0 top-0 h-40 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('/images/2025/12/Screenshot-2025-12-03-at-16.35.49-scaled.png')",
+            "url('/images/2025/12/Screenshot-2025-12-03-at-16.35.49-scaled.webp')",
           clipPath: "polygon(0 0, 100% 0, 100% 52%, 50% 100%, 0 52%)",
         }}
       />
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
 
           <Image
-            src="/images/2026/02/VS_Logo-10-scaled.png"
+            src="/images/2026/02/VS_Logo-10-scaled.webp"
             alt="Victoria Strings London"
             width={360}
             height={180}

@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import RelatedInstruments from "@/components/RelatedInstruments";
 import { doubleBasses, getDoubleBass } from "@/lib/double-basses";
 import { getRelated } from "@/lib/related";
+import { instrumentMetadata, instrumentSchema } from "@/lib/instrument-seo";
 
 export function generateStaticParams() {
   return doubleBasses.map((d) => ({ slug: d.slug }));
@@ -19,11 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const doubleBass = getDoubleBass(slug);
-  return {
-    title: doubleBass
-      ? `${doubleBass.title} | Victoria Strings London`
-      : "Double Bass | Victoria Strings London",
-  };
+  return instrumentMetadata(doubleBass, "Double Bass", "/double-bass");
 }
 
 export default async function DoubleBassDetailPage({
@@ -41,13 +38,19 @@ export default async function DoubleBassDetailPage({
     <>
       <Header />
       <main>
-        <InstrumentCarousel images={doubleBass.images} caption={doubleBass.caption} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(instrumentSchema(doubleBass, "Double Bass", "/double-bass")),
+          }}
+        />
+        <InstrumentCarousel images={doubleBass.images} caption={doubleBass.caption} title={doubleBass.title} />
         <RelatedInstruments
           title="More Double Basses to Explore"
           basePath="/double-bass"
           items={related}
         />
-        <ContactSection />
+        <ContactSection instrument={doubleBass.title} />
       </main>
       <Footer />
     </>

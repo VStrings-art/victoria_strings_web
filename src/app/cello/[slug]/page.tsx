@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import RelatedInstruments from "@/components/RelatedInstruments";
 import { cellos, getCello } from "@/lib/cellos";
 import { getRelated } from "@/lib/related";
+import { instrumentMetadata, instrumentSchema } from "@/lib/instrument-seo";
 
 export function generateStaticParams() {
   return cellos.map((c) => ({ slug: c.slug }));
@@ -19,9 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const cello = getCello(slug);
-  return {
-    title: cello ? `${cello.title} | Victoria Strings London` : "Cello | Victoria Strings London",
-  };
+  return instrumentMetadata(cello, "Cello", "/cello");
 }
 
 export default async function CelloDetailPage({
@@ -39,9 +38,15 @@ export default async function CelloDetailPage({
     <>
       <Header />
       <main>
-        <InstrumentCarousel images={cello.images} caption={cello.caption} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(instrumentSchema(cello, "Cello", "/cello")),
+          }}
+        />
+        <InstrumentCarousel images={cello.images} caption={cello.caption} title={cello.title} />
         <RelatedInstruments title="More Cellos to Explore" basePath="/cello" items={related} />
-        <ContactSection />
+        <ContactSection instrument={cello.title} />
       </main>
       <Footer />
     </>

@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    image: "/images/2026/03/violin_list_1.png",
+    image: "/images/2026/03/violin_list_1.webp",
     title: "Master Luthier Representation",
     body: "Violins crafted by outstanding makers from our curated network of master luthiers, chosen for individuality, craftsmanship and long-term musical value.",
   },
   {
-    image: "/images/2026/03/violin_list_2.png",
+    image: "/images/2026/03/violin_list_2.webp",
     title: "Concert-Ready Tone",
     body: "Each instrument is evaluated for clarity, projection and tonal colour across the register, offering the flexibility required for advanced study and performance.",
   },
   {
-    image: "/images/2026/03/violin_list_3.png",
+    image: "/images/2026/03/violin_list_3.webp",
     title: "Professional Setup & Aftercare",
     body: "Professional setup, sound adjustment and continuing care ensure that your violin remains comfortable to play and performs at its best over time.",
   },
@@ -51,7 +51,7 @@ export default function ViolinPage() {
         />
 
         <CinematicHero
-          image="/images/2026/03/violin_player.png"
+          image="/images/2026/03/violin_player.webp"
           lines={["Handcrafted Violins", "Curated for Serious Players"]}
         />
 

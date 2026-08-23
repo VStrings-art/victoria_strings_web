@@ -14,11 +14,11 @@ export default function WhoWeAreSection() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           <Link
-            href="/"
+            href="/luthiers"
             className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 py-14 text-center transition-colors duration-200 hover:border-gold-500/50 hover:bg-white/[0.07]"
           >
             <Image
-              src="/images/vs-logo-cropped.png"
+              src="/images/vs-logo-cropped.webp"
               alt="Victoria Strings London"
               width={400}
               height={213}
@@ -41,7 +41,7 @@ export default function WhoWeAreSection() {
             className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 py-14 text-center transition-colors duration-200 hover:border-gold-500/50 hover:bg-white/[0.07]"
           >
             <Image
-              src="/images/prima-logo.png"
+              src="/images/prima-logo.webp"
               alt="Prima London"
               width={400}
               height={225}

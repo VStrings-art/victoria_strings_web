@@ -6,12 +6,17 @@ import { useEffect, useRef, useState } from "react";
 const SLIDE_MS = 6000;
 
 export default function InstrumentCarousel({
-  images,
+  images: rawImages,
   caption,
+  title,
 }: {
   images: string[];
   caption: string;
+  title?: string;
 }) {
+  // Some instruments only have one or two photographs; showing the same shot
+  // twice would read as a broken slideshow, so collapse repeats.
+  const images = Array.from(new Set(rawImages));
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(true);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -96,6 +101,21 @@ export default function InstrumentCarousel({
         >
           {caption}
         </p>
+
+        {title && (
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#7b1d1b] px-9 py-4 text-[14px] tracking-[0.16em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+            >
+              Enquire about {title}
+              <span aria-hidden="true">&#8594;</span>
+            </a>
+            <p className="text-center font-sans text-[14px] text-[#6b6560]">
+              Price on request &middot; Trials in London by appointment
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
