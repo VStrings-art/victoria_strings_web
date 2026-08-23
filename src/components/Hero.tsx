@@ -31,12 +31,15 @@ export default function Hero({
 
           <div className="mt-7 h-px w-[86px] bg-gradient-to-r from-gold-300 to-transparent" />
 
-          <p className="mt-7 max-w-[30rem] font-display text-[1.08rem] leading-[1.65] text-white/85 sm:text-[1.3rem]">
+          {/* A phone screen only has room for the mark and the headline —
+              the supporting line and the buttons crowd it, so they start
+              at md and the collection stays one tap away in the menu. */}
+          <p className="mt-7 hidden max-w-[30rem] font-display text-[1.3rem] leading-[1.65] text-white/85 md:block">
             Violins, violas, cellos and double basses &mdash; crafted for
             professional musicians and serious students.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <div className="hidden gap-4 md:mt-9 md:flex">
             <Link
               href="/violin"
               className="inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-7 py-3.5 text-[12px] font-semibold tracking-[0.14em] text-[#111] uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-gold-200 hover:shadow-[0_12px_30px_rgba(0,0,0,0.3)] sm:text-[13px]"
