@@ -32,7 +32,7 @@ export default function InstrumentCarousel({
   }, [playing, images.length, index]);
 
   return (
-    <section className="relative w-full bg-white pt-[calc(4.8rem+150px)] pb-11">
+    <section className="relative w-full bg-white pt-[calc(4.8rem+64px)] pb-11 md:pt-[calc(4.8rem+150px)]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/35 to-transparent" />
       <div className="relative mx-auto w-full max-w-[1600px]">
         <div className="relative grid h-[min(900px,82vh)] w-full place-items-center overflow-hidden">
@@ -97,21 +97,21 @@ export default function InstrumentCarousel({
         <p
           key={caption}
           className="animate-caption-in mx-auto mt-6 w-[min(1200px,92vw)] text-center font-script text-gold-600 [text-shadow:0_10px_28px_rgba(179,138,90,0.14)]"
-          style={{ fontSize: "clamp(2rem, 3.2vw, 3.15rem)", lineHeight: 1.1 }}
+          style={{ fontSize: "clamp(1.45rem, 5vw, 3.15rem)", lineHeight: 1.15 }}
         >
           {caption}
         </p>
 
         {title && (
-          <div className="mt-10 flex flex-col items-center gap-3">
+          <div className="mt-9 flex flex-col items-center gap-3 px-6 md:mt-10">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#7b1d1b] px-9 py-4 text-[14px] tracking-[0.16em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+              className="inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-[#7b1d1b] px-6 py-3.5 text-center text-[12px] tracking-[0.1em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:gap-2.5 sm:px-9 sm:py-4 sm:text-[14px] sm:tracking-[0.16em]"
             >
               Enquire About This Instrument
               <span aria-hidden="true">&#8594;</span>
             </a>
-            <p className="text-center font-sans text-[14px] text-[#6b6560]">
+            <p className="text-center font-sans text-[13px] text-[#6b6560] sm:text-[14px]">
               Price on request &middot; Trials in London by appointment
             </p>
           </div>

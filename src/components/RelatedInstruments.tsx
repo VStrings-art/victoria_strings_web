@@ -23,13 +23,13 @@ export default function RelatedInstruments({
       <h2 className="mb-14 text-center text-[1.7rem] tracking-[0.1em] text-[#222] uppercase md:text-[2.1rem]">
         {title}
       </h2>
-      <div className="grid grid-cols-2 gap-x-8 gap-y-14 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-8 sm:gap-y-14 lg:grid-cols-4">
         {items.map((item) => (
           <div key={item.slug} className="group text-center">
             <Link
               href={`${basePath}/${item.slug}`}
               aria-label={`View ${item.title}`}
-              className="mx-auto block aspect-[2/3] w-[85%] max-h-[400px]"
+              className="mx-auto block aspect-[2/3] w-[92%] max-h-[400px] sm:w-[85%]"
             >
               <div className="relative h-full w-full transition-transform duration-300 ease-out group-hover:-translate-y-2">
                 <Image
@@ -43,7 +43,7 @@ export default function RelatedInstruments({
             </Link>
             <Link
               href={`${basePath}/${item.slug}`}
-              className="mt-6 inline-flex items-center justify-center gap-2.5 rounded-full border border-black/55 bg-white px-[30px] py-3.5 text-[15px] tracking-[0.12em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white"
+              className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-full border border-black/55 bg-white px-3 py-3 text-[11px] leading-none tracking-[0.06em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white sm:mt-6 sm:inline-flex sm:w-auto sm:gap-2.5 sm:px-[30px] sm:py-3.5 sm:text-[15px] sm:tracking-[0.12em]"
             >
               View Instrument{" "}
               <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">

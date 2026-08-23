@@ -29,8 +29,11 @@ export default function MasterFeaturesSection({
             className="group relative min-h-[340px] overflow-hidden rounded-[20px] bg-cover bg-center p-[54px] px-[30px] text-left text-white transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.15)] md:min-h-[420px]"
             style={{ backgroundImage: `url('${f.image}')` }}
           >
-            <div className="absolute inset-0 bg-[linear-gradient(150deg,rgba(0,0,0,0.65),rgba(0,0,0,0.35))]" />
-            <div className="relative z-10">
+            {/* Several of these photographs are bright workshop shots; the old
+                scrim bottomed out at 35% and left the white body copy almost
+                unreadable over them. */}
+            <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(0,0,0,0.82),rgba(0,0,0,0.56))]" />
+            <div className="relative z-10 [text-shadow:0_1px_14px_rgba(0,0,0,0.5)]">
               <div className="mb-5 inline-flex h-[38px] w-[38px] items-center justify-center rounded-full border border-[#f4d27a]/80 text-[0.9rem] font-semibold tracking-[0.08em] text-[#f4d27a]">
                 {String(i + 1).padStart(2, "0")}
               </div>
