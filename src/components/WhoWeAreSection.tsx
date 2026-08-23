@@ -14,7 +14,7 @@ export default function WhoWeAreSection() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           <Link
-            href="/luthiers"
+            href="/violin"
             className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 py-14 text-center transition-colors duration-200 hover:border-gold-500/50 hover:bg-white/[0.07]"
           >
             <Image

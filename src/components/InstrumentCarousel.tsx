@@ -108,7 +108,7 @@ export default function InstrumentCarousel({
               href="#contact"
               className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#7b1d1b] px-9 py-4 text-[14px] tracking-[0.16em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
             >
-              Enquire about {title}
+              Enquire About
               <span aria-hidden="true">&#8594;</span>
             </a>
             <p className="text-center font-sans text-[14px] text-[#6b6560]">

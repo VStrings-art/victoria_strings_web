@@ -6,7 +6,6 @@ const categoryLinks = [
   { href: "/viola", label: "Violas" },
   { href: "/cello", label: "Cellos" },
   { href: "/double-bass", label: "Double Basses" },
-  { href: "/luthiers", label: "Luthiers" },
 ];
 
 const socialLinks = [
@@ -95,8 +94,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative z-[5] pb-8 text-center text-[14px] font-medium text-[#444]">
-        Copyright &copy; {new Date().getFullYear()} . Powered by Victoria Strings.
+      <div className="relative z-[5] mx-auto max-w-[1400px] px-6 pb-8 md:px-14">
+        <div className="mx-auto mb-6 h-px w-full max-w-[420px] bg-black/10" />
+        <p className="text-center text-[14px] leading-[1.9] font-medium text-[#444]">
+          Victoria Strings London &middot; Registered in England &amp; Wales
+          <span className="hidden md:inline"> &middot; </span>
+          <br className="md:hidden" />
+          Company No. 13139549
+        </p>
+        <p className="mt-1.5 text-center text-[14px] font-medium text-[#666]">
+          Copyright &copy; {new Date().getFullYear()} Victoria Strings. All rights reserved.
+        </p>
       </div>
     </footer>
   );

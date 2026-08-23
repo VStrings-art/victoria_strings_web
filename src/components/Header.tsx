@@ -10,7 +10,6 @@ const links = [
   { href: "/viola", label: "Viola" },
   { href: "/cello", label: "Cello" },
   { href: "/double-bass", label: "Double Bass" },
-  { href: "/luthiers", label: "Luthiers" },
 ];
 
 export default function Header() {

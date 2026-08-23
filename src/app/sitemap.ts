@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/viola",
     "/cello",
     "/double-bass",
-    "/luthiers",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
