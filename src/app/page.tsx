@@ -13,7 +13,16 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <Hero />
+        <Hero
+          focal="68%"
+          eyebrow="Fine String Instruments · London"
+          title={["Handcrafted by", "Master Luthiers"]}
+          subtitle="Violins, violas, cellos and double basses — crafted for professional musicians and serious students."
+          actions={[
+            { label: "Explore the Collection", href: "/violin", primary: true },
+            { label: "Enquire", href: "#contact" },
+          ]}
+        />
         <AboutSection />
         <CategoryGrid />
         <WhoWeAreSection />
