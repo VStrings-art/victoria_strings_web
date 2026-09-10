@@ -44,7 +44,7 @@ export default async function ViolinDetailPage({
             __html: JSON.stringify(instrumentSchema(violin, "Violin", "/violin")),
           }}
         />
-        <InstrumentCarousel images={violin.images} caption={violin.caption} title={violin.title} category="Violin" />
+        <InstrumentCarousel images={violin.images} caption={violin.caption} title={violin.title} />
         <RelatedInstruments title="More Violins to Explore" basePath="/violin" items={related} />
         <ContactSection instrument={violin.title} />
       </main>

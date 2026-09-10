@@ -44,7 +44,7 @@ export default async function DoubleBassDetailPage({
             __html: JSON.stringify(instrumentSchema(doubleBass, "Double Bass", "/double-bass")),
           }}
         />
-        <InstrumentCarousel images={doubleBass.images} caption={doubleBass.caption} title={doubleBass.title} category="Double Bass" />
+        <InstrumentCarousel images={doubleBass.images} caption={doubleBass.caption} title={doubleBass.title} />
         <RelatedInstruments
           title="More Double Basses to Explore"
           basePath="/double-bass"

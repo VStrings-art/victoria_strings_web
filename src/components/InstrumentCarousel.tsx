@@ -9,12 +9,10 @@ export default function InstrumentCarousel({
   images: rawImages,
   caption,
   title,
-  category,
 }: {
   images: string[];
   caption: string;
   title?: string;
-  category?: string;
 }) {
   // Some instruments only have one or two photographs; showing the same shot
   // twice would read as a broken slideshow, so collapse repeats.
@@ -98,12 +96,7 @@ export default function InstrumentCarousel({
 
         {title && (
           <div className="mt-8 px-6 text-center">
-            {category && (
-              <p className="mb-2.5 font-sans text-[0.68rem] font-semibold tracking-[0.28em] text-[#a97f34] uppercase sm:text-[0.74rem]">
-                {category}
-              </p>
-            )}
-            <h1 className="font-display text-[2.1rem] leading-[1.1] text-[#1f1b18] sm:text-[2.8rem] md:text-[3.4rem]">
+            <h1 className="font-display text-[2.1rem] leading-[1.1] text-gold-600 sm:text-[2.8rem] md:text-[3.4rem]">
               {title}
             </h1>
             <div className="mx-auto mt-5 h-px w-[70px] bg-gradient-to-r from-transparent via-[#b38a5a] to-transparent" />

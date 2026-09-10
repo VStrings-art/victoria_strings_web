@@ -58,12 +58,9 @@ export default function CollectionSection({
             </Link>
             <Link
               href={`${basePath}/${item.slug}`}
-              className="mt-6 inline-flex max-w-full items-center justify-center gap-2.5 rounded-full border border-black/55 bg-white px-6 py-3.5 text-[13px] tracking-[0.12em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white sm:px-[30px] sm:text-[15px]"
+              className="mt-6 inline-block max-w-full px-2 text-[1.3rem] leading-[1.3] font-medium tracking-[0.14em] text-[#1f1b18] uppercase transition-colors duration-200 ease-out hover:text-[#a97f34] sm:text-[1.6rem]"
             >
-              {item.name}{" "}
-              <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">
-                &#8594;
-              </span>
+              {item.name}
             </Link>
           </div>
         ))}
