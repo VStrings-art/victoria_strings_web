@@ -2,8 +2,9 @@ import type { Instrument } from "./instrument-types";
 
 export const doubleBasses: Instrument[] = [
   {
-    slug: "doublebass-01",
-    title: "Double Bass 01",
+    slug: "andes",
+    character: "Deep · Powerful · Orchestral",
+    title: "Andes",
     images: [
       "/images/2026/03/doublebass1_front-scaled.webp",
       "/images/2026/03/doublebass1_back.webp",
@@ -13,8 +14,9 @@ export const doubleBasses: Instrument[] = [
       "Antiqued Double Bass with deep red varnish, offering powerful resonance and rich orchestral character.",
   },
   {
-    slug: "doublebass-02",
-    title: "Double Bass 02",
+    slug: "atlas",
+    character: "Resonant · Projecting · Commanding",
+    title: "Atlas",
     images: [
       "/images/2026/03/doublebass2_back.webp",
       "/images/2026/03/doublebass2_front.webp",

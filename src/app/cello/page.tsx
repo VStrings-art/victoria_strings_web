@@ -50,7 +50,6 @@ export default function CelloPage() {
         <CollectionSection
           label="Our Collection"
           title="Refined Cellos with Presence, Balance & Authority"
-          note="Each of our cellos carries the name of one of the world's great mountains — chosen to match the character of its voice."
           basePath="/cello"
           items={collectionItems}
         />
