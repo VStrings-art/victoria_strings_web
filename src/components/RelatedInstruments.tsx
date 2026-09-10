@@ -41,13 +41,10 @@ export default function RelatedInstruments({
                 />
               </div>
             </Link>
-            <Link
-              href={`${basePath}/${item.slug}`}
-              className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-full border border-black/55 bg-white px-3 py-3 text-[11px] leading-none tracking-[0.06em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white sm:mt-6 sm:inline-flex sm:w-auto sm:gap-2.5 sm:px-[30px] sm:py-3.5 sm:text-[15px] sm:tracking-[0.12em]"
-            >
-              {item.title}{" "}
-              <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">
-                &#8594;
+            <Link href={`${basePath}/${item.slug}`} className="group/label block px-1 pb-1">
+              <span className="mx-auto mt-4 block h-px w-[30px] bg-[#c9ab7c]" />
+              <span className="mt-3 block text-[0.95rem] leading-[1.25] font-medium tracking-[0.13em] text-[#1f1b18] uppercase transition-colors duration-200 ease-out group-hover/label:text-[#a97f34] sm:mt-3.5 sm:text-[1.15rem]">
+                {item.title}
               </span>
             </Link>
           </div>

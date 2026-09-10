@@ -3,6 +3,7 @@ import type { Instrument } from "./instrument-types";
 export const cellos: Instrument[] = [
   {
     slug: "everest",
+    character: "Deep · Broad · Singing",
     title: "Everest",
     images: [
       "/images/2026/cellos/cello5_Mara/cello5_back.webp",
@@ -14,6 +15,7 @@ export const cellos: Instrument[] = [
   },
   {
     slug: "kilimanjaro",
+    character: "Dark · Warm · Commanding",
     title: "Kilimanjaro",
     images: [
       "/images/2026/cellos/cello6_Davidoff/cello6_back.webp",
@@ -25,6 +27,7 @@ export const cellos: Instrument[] = [
   },
   {
     slug: "fuji",
+    character: "Bright · Quick · Open",
     title: "Fuji",
     images: [
       "/images/2026/cellos/cello7/cello7_front.webp",
@@ -36,6 +39,7 @@ export const cellos: Instrument[] = [
   },
   {
     slug: "denali",
+    character: "Warm · Powerful · Expansive",
     title: "Denali",
     images: [
       "/images/2026/02/cello1_back.webp",
@@ -47,6 +51,7 @@ export const cellos: Instrument[] = [
   },
   {
     slug: "matterhorn",
+    character: "Brilliant · Golden · Resonant",
     title: "Matterhorn",
     images: [
       "/images/2026/02/cello2_front.webp",
@@ -57,6 +62,7 @@ export const cellos: Instrument[] = [
   },
   {
     slug: "annapurna",
+    character: "Rich · Vivid · Singing",
     title: "Annapurna",
     images: [
       "/images/2026/cellos/cello3/cello3_back.webp",
@@ -68,6 +74,7 @@ export const cellos: Instrument[] = [
   },
   {
     slug: "olympus",
+    character: "Antiqued · Warm · Deep",
     title: "Olympus",
     images: [
       "/images/2026/cellos/cello4/cello4_front.webp",

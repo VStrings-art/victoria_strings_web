@@ -36,6 +36,7 @@ const collectionItems = violins.map((v) => ({
   image: v.images[0],
   alt: v.title,
   name: v.title,
+  character: v.character,
 }));
 
 export default function ViolinPage() {

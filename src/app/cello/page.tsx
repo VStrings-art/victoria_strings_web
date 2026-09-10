@@ -34,6 +34,7 @@ const collectionItems = cellos.map((c) => ({
   image: c.images[0],
   alt: c.title,
   name: c.title,
+  character: c.character,
 }));
 
 export default function CelloPage() {

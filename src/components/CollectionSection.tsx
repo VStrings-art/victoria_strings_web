@@ -5,8 +5,10 @@ type Item = {
   slug: string;
   image: string;
   alt: string;
-  /** Shown on the card's button, so each instrument is called by its name. */
+  /** Each instrument is called by its name rather than a generic label. */
   name: string;
+  /** Optional three-word summary of the instrument's voice. */
+  character?: string;
 };
 
 export default function CollectionSection({
@@ -56,11 +58,20 @@ export default function CollectionSection({
                 />
               </div>
             </Link>
+            {/* Museum label: a gold hairline, the name, then the voice. */}
             <Link
               href={`${basePath}/${item.slug}`}
-              className="mt-6 inline-block max-w-full px-2 text-[1.3rem] leading-[1.3] font-medium tracking-[0.14em] text-[#1f1b18] uppercase transition-colors duration-200 ease-out hover:text-[#a97f34] sm:text-[1.6rem]"
+              className="group/label mt-1 block px-2 pb-1"
             >
-              {item.name}
+              <span className="mx-auto mt-6 block h-px w-[38px] bg-[#c9ab7c]" />
+              <span className="mt-4 block text-[1.3rem] leading-[1.25] font-medium tracking-[0.14em] text-[#1f1b18] uppercase transition-colors duration-200 ease-out group-hover/label:text-[#a97f34] sm:text-[1.6rem]">
+                {item.name}
+              </span>
+              {item.character && (
+                <span className="mt-2.5 block font-sans text-[0.62rem] leading-[1.5] font-medium tracking-[0.19em] text-[#a08b73] uppercase sm:text-[0.66rem]">
+                  {item.character}
+                </span>
+              )}
             </Link>
           </div>
         ))}
