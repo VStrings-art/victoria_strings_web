@@ -45,7 +45,7 @@ export default function RelatedInstruments({
               href={`${basePath}/${item.slug}`}
               className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-full border border-black/55 bg-white px-3 py-3 text-[11px] leading-none tracking-[0.06em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white sm:mt-6 sm:inline-flex sm:w-auto sm:gap-2.5 sm:px-[30px] sm:py-3.5 sm:text-[15px] sm:tracking-[0.12em]"
             >
-              View Instrument{" "}
+              {item.title}{" "}
               <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">
                 &#8594;
               </span>

@@ -33,6 +33,7 @@ const collectionItems = cellos.map((c) => ({
   slug: c.slug,
   image: c.images[0],
   alt: c.title,
+  name: c.title,
 }));
 
 export default function CelloPage() {
@@ -48,6 +49,7 @@ export default function CelloPage() {
         <CollectionSection
           label="Our Collection"
           title="Refined Cellos with Presence, Balance & Authority"
+          note="Each of our cellos carries the name of one of the world's great mountains — chosen to match the character of its voice."
           basePath="/cello"
           items={collectionItems}
         />

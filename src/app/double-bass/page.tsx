@@ -31,6 +31,7 @@ const collectionItems = doubleBasses.map((d) => ({
   slug: d.slug,
   image: d.images[0],
   alt: d.title,
+  name: d.title,
 }));
 
 export default function DoubleBassPage() {

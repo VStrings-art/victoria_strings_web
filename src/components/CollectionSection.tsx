@@ -5,16 +5,20 @@ type Item = {
   slug: string;
   image: string;
   alt: string;
+  /** Shown on the card's button, so each instrument is called by its name. */
+  name: string;
 };
 
 export default function CollectionSection({
   label,
   title,
+  note,
   basePath,
   items,
 }: {
   label: string;
   title: string;
+  note?: string;
   basePath: string;
   items: Item[];
 }) {
@@ -27,6 +31,11 @@ export default function CollectionSection({
         <h2 className="text-[2.4rem] leading-[1.25] text-[#222] md:text-[3.2rem]">
           {title}
         </h2>
+        {note && (
+          <p className="mx-auto mt-6 max-w-[42rem] font-sans text-[0.98rem] leading-[1.75] text-[#6b6560]">
+            {note}
+          </p>
+        )}
       </section>
 
       <section className="mx-auto grid max-w-[1560px] grid-cols-1 gap-x-32 gap-y-20 px-6 py-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -49,9 +58,9 @@ export default function CollectionSection({
             </Link>
             <Link
               href={`${basePath}/${item.slug}`}
-              className="mt-6 inline-flex items-center justify-center gap-2.5 rounded-full border border-black/55 bg-white px-[30px] py-3.5 text-[15px] tracking-[0.12em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white"
+              className="mt-6 inline-flex max-w-full items-center justify-center gap-2.5 rounded-full border border-black/55 bg-white px-6 py-3.5 text-[13px] tracking-[0.12em] text-[#111] uppercase transition-[transform,background-color,border-color,color] duration-200 ease-out hover:-translate-y-0.5 hover:border-black/92 hover:bg-[#111] hover:text-white sm:px-[30px] sm:text-[15px]"
             >
-              View Instrument{" "}
+              {item.name}{" "}
               <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">
                 &#8594;
               </span>

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/cello/cello-01", "destination": "/cello/denali", "permanent": true },
+    { "source": "/cello/cello-02", "destination": "/cello/matterhorn", "permanent": true },
+    { "source": "/cello/cello-03", "destination": "/cello/annapurna", "permanent": true },
+    { "source": "/cello/cello-04", "destination": "/cello/olympus", "permanent": true },
+    { "source": "/cello/cello-05", "destination": "/cello/everest", "permanent": true },
+    { "source": "/cello/cello-06", "destination": "/cello/kilimanjaro", "permanent": true },
+    { "source": "/cello/cello-07", "destination": "/cello/fuji", "permanent": true },
+    { "source": "/luthiers", "destination": "/", "permanent": false }
+  ]
+}

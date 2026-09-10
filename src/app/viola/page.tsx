@@ -17,6 +17,7 @@ const collectionItems = violas.map((v) => ({
   slug: v.slug,
   image: v.images[0],
   alt: v.title,
+  name: v.title,
 }));
 
 export default function ViolaPage() {

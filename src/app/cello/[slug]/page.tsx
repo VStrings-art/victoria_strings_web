@@ -44,7 +44,7 @@ export default async function CelloDetailPage({
             __html: JSON.stringify(instrumentSchema(cello, "Cello", "/cello")),
           }}
         />
-        <InstrumentCarousel images={cello.images} caption={cello.caption} title={cello.title} />
+        <InstrumentCarousel images={cello.images} caption={cello.caption} title={cello.title} category="Cello" />
         <RelatedInstruments title="More Cellos to Explore" basePath="/cello" items={related} />
         <ContactSection instrument={cello.title} />
       </main>
