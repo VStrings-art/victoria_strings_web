@@ -32,8 +32,17 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
         scrolled ? "bg-[rgba(0,0,0,0.92)] shadow-[0_4px_18px_rgba(0,0,0,0.6)]" : "bg-transparent"
       }`}
     >
+      {/* Several covers are pale at the top, leaving the white nav and the
+          language control barely legible. A soft scrim gives them ground
+          without putting a bar across the photograph. */}
       <div
-        className={`mx-auto flex max-w-[1600px] items-center justify-between px-5 transition-[padding] duration-300 md:px-8 ${
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 top-0 h-[150px] bg-gradient-to-b from-black/55 via-black/25 to-transparent transition-opacity duration-300 ${
+          scrolled ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <div
+        className={`relative mx-auto flex max-w-[1600px] items-center justify-between px-5 transition-[padding] duration-300 md:px-8 ${
           scrolled ? "py-3" : "py-[18px]"
         }`}
       >

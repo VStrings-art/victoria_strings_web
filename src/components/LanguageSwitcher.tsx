@@ -6,20 +6,13 @@ import { useEffect, useRef, useState } from "react";
 import {
   LOCALES,
   LOCALE_NAMES,
-  LOCALE_SHORT,
   localePath,
   stripLocale,
   type Locale,
 } from "@/i18n/config";
 import { getDictionary } from "@/i18n";
 
-export default function LanguageSwitcher({
-  locale,
-  variant = "menu",
-}: {
-  locale: Locale;
-  variant?: "menu" | "stacked";
-}) {
+export default function LanguageSwitcher({ locale }: { locale: Locale }) {
   const pathname = usePathname() ?? "/";
   // The same page in another language is this path with its prefix swapped.
   const shared = stripLocale(pathname);
@@ -44,25 +37,6 @@ export default function LanguageSwitcher({
     };
   }, [open]);
 
-  if (variant === "stacked") {
-    return (
-      <div className="flex flex-wrap gap-x-5 gap-y-2 px-3">
-        {LOCALES.map((l) => (
-          <Link
-            key={l}
-            href={localePath(l, shared)}
-            hrefLang={l}
-            className={`text-sm tracking-[0.12em] uppercase transition-colors ${
-              l === locale ? "text-[#f2c869]" : "text-white/70 hover:text-white"
-            }`}
-          >
-            {LOCALE_SHORT[l]}
-          </Link>
-        ))}
-      </div>
-    );
-  }
-
   return (
     <div ref={ref} className="relative">
       <button
@@ -71,9 +45,9 @@ export default function LanguageSwitcher({
         aria-haspopup="true"
         aria-expanded={open}
         aria-label={t.nav.language}
-        className="flex items-center gap-1.5 rounded-full border border-white/35 px-3.5 py-1.5 text-[15px] font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:border-white/70 hover:text-[#f2c869] focus-visible:ring-2 focus-visible:ring-[#f2c869] focus-visible:outline-none"
+        className="flex items-center gap-2 rounded-full border border-white/35 px-4 py-2 text-[12px] font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:border-white/70 hover:text-[#f2c869] focus-visible:ring-2 focus-visible:ring-[#f2c869] focus-visible:outline-none sm:px-5 sm:text-[14px]"
       >
-        {LOCALE_SHORT[locale]}
+        {t.nav.language}
         <span
           aria-hidden="true"
           className={`text-[9px] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
