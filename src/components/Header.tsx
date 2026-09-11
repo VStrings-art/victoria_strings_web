@@ -59,18 +59,23 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
               <span className="absolute -bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#f7e3a4] via-[#f2c869] to-[#c48a3a] transition-all duration-250 group-hover:w-full" />
             </Link>
           ))}
-          <LanguageSwitcher locale={locale} />
         </nav>
 
-        <button
-          className="flex flex-col gap-1.5 p-1 text-white lg:hidden"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMenuOpen((v) => !v)}
-        >
-          <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`block h-0.5 w-6 rounded-full bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
-        </button>
+        {/* The language control sits in the top-right corner at every width,
+            not only where the desktop nav appears. */}
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher locale={locale} />
+
+          <button
+            className="flex flex-col gap-1.5 p-1 text-white lg:hidden"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 rounded-full bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          </button>
+        </div>
       </div>
 
       {menuOpen && (
@@ -85,9 +90,6 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
               {label}
             </Link>
           ))}
-          <div className="mt-3 border-t border-white/10 pt-4">
-            <LanguageSwitcher locale={locale} variant="stacked" />
-          </div>
         </div>
       )}
     </header>
