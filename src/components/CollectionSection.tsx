@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { type Locale, localePath } from "@/i18n/config";
 
 type Item = {
   slug: string;
@@ -17,12 +18,14 @@ export default function CollectionSection({
   note,
   basePath,
   items,
+  locale = "en",
 }: {
   label: string;
   title: string;
   note?: string;
   basePath: string;
   items: Item[];
+  locale?: Locale;
 }) {
   return (
     <>
@@ -44,7 +47,7 @@ export default function CollectionSection({
         {items.map((item) => (
           <div key={item.slug} className="group text-center font-display">
             <Link
-              href={`${basePath}/${item.slug}`}
+              href={localePath(locale, `${basePath}/${item.slug}`)}
               aria-label="View this instrument"
               className="mx-auto block aspect-[2/3] w-[88%] max-h-[650px]"
             >
@@ -60,7 +63,7 @@ export default function CollectionSection({
             </Link>
             {/* Museum label: a gold hairline, the name, then the voice. */}
             <Link
-              href={`${basePath}/${item.slug}`}
+              href={localePath(locale, `${basePath}/${item.slug}`)}
               className="group/label mt-1 block px-2 pb-1"
             >
               <span className="mx-auto mt-6 block h-px w-[38px] bg-[#c9ab7c]" />

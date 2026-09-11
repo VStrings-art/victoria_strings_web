@@ -3,16 +3,15 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const crafts = [
-  { title: "Plate Carving & Graduation", youtubeId: "tslwJ7tYDY0" },
-  { title: "Scroll Carving", youtubeId: "ChpRmr6TEYM" },
-  { title: "Purfling Inlay", youtubeId: "jtm4riKp54c" },
-];
+import { type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n";
+
+const VIDEO_IDS = ["tslwJ7tYDY0", "ChpRmr6TEYM", "jtm4riKp54c"];
 
 // The YouTube player is only mounted once a visitor asks for it — embedding
 // three iframes up front costs roughly a megabyte of scripts before anyone
 // presses play.
-function CraftVideo({ title, youtubeId }: { title: string; youtubeId: string }) {
+function CraftVideo({ title, youtubeId, playLabel }: { title: string; youtubeId: string; playLabel: string }) {
   const [playing, setPlaying] = useState(false);
 
   return (
@@ -29,7 +28,7 @@ function CraftVideo({ title, youtubeId }: { title: string; youtubeId: string }) 
         <button
           type="button"
           onClick={() => setPlaying(true)}
-          aria-label={`Play video: ${title}`}
+          aria-label={`${playLabel}: ${title}`}
           className="group/play absolute inset-0 h-full w-full cursor-pointer"
         >
           <Image
@@ -49,17 +48,17 @@ function CraftVideo({ title, youtubeId }: { title: string; youtubeId: string }) 
   );
 }
 
-export default function CraftSection() {
+export default function CraftSection({ locale = "en" }: { locale?: Locale }) {
+  const t = getDictionary(locale);
+  const crafts = VIDEO_IDS.map((youtubeId, i) => ({ youtubeId, title: t.craft.items[i] }));
   return (
     <section className="mx-auto mt-20 mb-8 max-w-[1680px] px-6 pb-[4.5rem] font-display text-[#222] md:px-8">
       <div className="relative mb-16 text-center">
         <h2 className="text-[2.3rem] tracking-[0.05em] md:text-[3.3rem]">
-          The Soul of Strings, Crafted by Hand
+          {t.craft.heading}
         </h2>
         <p className="mx-auto mt-2 max-w-[920px] text-[1.05rem] leading-[1.75] text-[#555] md:text-[1.3rem]">
-          Every instrument from Victoria Strings tells its own story &mdash;
-          shaped by skilled hands and guided by passion, crafted to achieve
-          the perfect balance between elegance, resonance, and soul.
+          {t.craft.intro}
         </p>
         <div className="mx-auto mt-9 h-px w-[140px] bg-gradient-to-r from-transparent via-[#d9b66a] to-transparent" />
       </div>
@@ -70,7 +69,7 @@ export default function CraftSection() {
             key={c.youtubeId}
             className="group flex flex-col gap-5 transition-transform duration-300 ease-out hover:-translate-y-1.5"
           >
-            <CraftVideo title={c.title} youtubeId={c.youtubeId} />
+            <CraftVideo title={c.title} youtubeId={c.youtubeId} playLabel={t.craft.play} />
             <h3 className="text-center text-[1.4rem] md:text-[1.6rem]">{c.title}</h3>
           </article>
         ))}

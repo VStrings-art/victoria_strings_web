@@ -1,12 +1,21 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n";
 
 const WEB3FORMS_ACCESS_KEY = "4e69d7b4-fd9c-4648-b5cb-78826ed514a2";
 
 type Status = "idle" | "submitting" | "success" | "error" | "flagged";
 
-export default function ContactSection({ instrument }: { instrument?: string }) {
+export default function ContactSection({
+  instrument,
+  locale = "en",
+}: {
+  instrument?: string;
+  locale?: Locale;
+}) {
+  const t = getDictionary(locale);
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -62,17 +71,17 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
       <div className="mx-auto flex max-w-[1300px] flex-col gap-10 px-6 md:flex-row md:gap-20 md:px-[60px]">
         <div className="md:flex-1">
           <h2 className="mb-[18px] text-[28px] tracking-[0.16em] text-[#1f1b18] uppercase md:text-[42px]">
-            {instrument ? "Enquire" : "Contact Us"}
+            {instrument ? t.contact.enquireHeading : t.contact.heading}
           </h2>
           <p className="mb-[26px] text-[17px] leading-[1.7] text-[#3a3733]">
             {instrument ? (
               <>
-                Interested in <span className="font-semibold">{instrument}</span>? Send us a
-                message and we will come back to you with full details, price and
-                availability &mdash; or arrange a trial in London.
+                {t.contact.enquireIntroBefore}
+                <span className="font-semibold">{instrument}</span>
+                {t.contact.enquireIntroAfter}
               </>
             ) : (
-              "Here is how you can contact us for any questions."
+              t.contact.intro
             )}
           </p>
 
@@ -87,7 +96,7 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
               </div>
               <div>
                 <div className="mb-1 text-[13px] font-bold tracking-[0.22em] text-[#111] uppercase">
-                  WhatsApp
+                  {t.contact.whatsapp}
                 </div>
                 <a
                   href="https://wa.me/447521071557"
@@ -107,7 +116,7 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
               </div>
               <div>
                 <div className="mb-1 text-[13px] font-bold tracking-[0.22em] text-[#111] uppercase">
-                  Email
+                  {t.contact.email}
                 </div>
                 <a
                   href="mailto:sales@victoriastrings.com"
@@ -139,14 +148,14 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
                 className="mb-2 block text-[14px] font-bold tracking-[0.16em] text-[#222] uppercase"
                 htmlFor="name"
               >
-                Name
+                {t.contact.nameLabel}
               </label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
-                placeholder="Your name"
+                placeholder={t.contact.namePlaceholder}
                 required
               />
             </div>
@@ -155,14 +164,14 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
                 className="mb-2 block text-[14px] font-bold tracking-[0.16em] text-[#222] uppercase"
                 htmlFor="email"
               >
-                Email
+                {t.contact.emailLabel}
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
-                placeholder="you@example.com"
+                placeholder={t.contact.emailPlaceholder}
                 required
               />
             </div>
@@ -171,17 +180,17 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
                 className="mb-2 block text-[14px] font-bold tracking-[0.16em] text-[#222] uppercase"
                 htmlFor="message"
               >
-                Message
+                {t.contact.messageLabel}
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
                 className="w-full rounded-md border border-[#ccc] bg-[#fafafa] px-3.5 py-3 text-[16px] font-medium text-[#111] outline-none placeholder:text-[#888] focus:border-[#7b1d1b]"
-                placeholder="Tell us what you're looking for"
+                placeholder={t.contact.messagePlaceholder}
                 defaultValue={
                   instrument
-                    ? `I would like to know more about ${instrument} — price, specifications and availability for a trial.`
+                    ? `${t.contact.prefillBefore}${instrument}${t.contact.prefillAfter}`
                     : undefined
                 }
                 required
@@ -192,16 +201,16 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
               disabled={status === "submitting"}
               className="inline-flex items-center justify-center rounded-full bg-[#7b1d1b] px-9 py-2.5 text-[13px] tracking-[0.18em] text-white uppercase transition-[background-color,transform,box-shadow] hover:-translate-y-px hover:bg-[#5d1513] hover:shadow-[0_10px_24px_rgba(0,0,0,0.12)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
             >
-              {status === "submitting" ? "Sending…" : "Send Message"}
+              {status === "submitting" ? t.contact.sending : t.contact.send}
             </button>
             {status === "success" && (
               <p className="mt-4 text-[15px] font-medium text-[#3a6b3a]">
-                Thank you — your message has been sent. We&apos;ll be in touch soon.
+                {t.contact.success}
               </p>
             )}
             {status === "error" && (
               <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
-                Something went wrong sending your message. Please email us directly at{" "}
+                {t.contact.errorBefore}
                 <a href="mailto:sales@victoriastrings.com" className="underline">
                   sales@victoriastrings.com
                 </a>
@@ -210,8 +219,7 @@ export default function ContactSection({ instrument }: { instrument?: string }) 
             )}
             {status === "flagged" && (
               <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
-                Your message contains multiple links and couldn&apos;t be sent automatically.
-                Please email us directly at{" "}
+                {t.contact.flaggedBefore}
                 <a href="mailto:sales@victoriastrings.com" className="underline">
                   sales@victoriastrings.com
                 </a>

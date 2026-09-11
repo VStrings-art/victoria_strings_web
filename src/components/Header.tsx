@@ -3,16 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { type Locale, localePath } from "@/i18n/config";
+import { getDictionary } from "@/i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/violin", label: "Violin" },
-  { href: "/viola", label: "Viola" },
-  { href: "/cello", label: "Cello" },
-  { href: "/double-bass", label: "Double Bass" },
-];
-
-export default function Header() {
+export default function Header({ locale = "en" }: { locale?: Locale }) {
+  const t = getDictionary(locale);
+  const links = [
+    { href: "/", label: t.nav.home },
+    { href: "/violin", label: t.nav.violin },
+    { href: "/viola", label: t.nav.viola },
+    { href: "/cello", label: t.nav.cello },
+    { href: "/double-bass", label: t.nav.doubleBass },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,7 +37,7 @@ export default function Header() {
           scrolled ? "py-3" : "py-[18px]"
         }`}
       >
-        <Link href="/" className="block">
+        <Link href={localePath(locale, "/")} className="block">
           <Image
             src="/images/2026/02/VS_Logo_transparent.webp"
             alt="Victoria Strings"
@@ -49,13 +52,14 @@ export default function Header() {
           {links.map(({ href, label }) => (
             <Link
               key={href}
-              href={href}
+              href={localePath(locale, href)}
               className="group relative inline-block pb-1 text-[21px] font-semibold tracking-[0.16em] text-white uppercase transition-colors hover:text-[#f2c869]"
             >
               {label}
               <span className="absolute -bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#f7e3a4] via-[#f2c869] to-[#c48a3a] transition-all duration-250 group-hover:w-full" />
             </Link>
           ))}
+          <LanguageSwitcher locale={locale} />
         </nav>
 
         <button
@@ -74,13 +78,16 @@ export default function Header() {
           {links.map(({ href, label }) => (
             <Link
               key={href}
-              href={href}
+              href={localePath(locale, href)}
               onClick={() => setMenuOpen(false)}
               className="rounded-lg px-3 py-2.5 text-base uppercase tracking-wide text-white hover:bg-white/5 hover:text-[#f2c869]"
             >
               {label}
             </Link>
           ))}
+          <div className="mt-3 border-t border-white/10 pt-4">
+            <LanguageSwitcher locale={locale} variant="stacked" />
+          </div>
         </div>
       )}
     </header>

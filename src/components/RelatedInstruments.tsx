@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { type Locale, localePath } from "@/i18n/config";
 
 type Item = {
   slug: string;
@@ -11,10 +12,12 @@ export default function RelatedInstruments({
   title,
   basePath,
   items,
+  locale = "en",
 }: {
   title: string;
   basePath: string;
   items: Item[];
+  locale?: Locale;
 }) {
   if (items.length === 0) return null;
 
@@ -27,7 +30,7 @@ export default function RelatedInstruments({
         {items.map((item) => (
           <div key={item.slug} className="group text-center">
             <Link
-              href={`${basePath}/${item.slug}`}
+              href={localePath(locale, `${basePath}/${item.slug}`)}
               aria-label={`View ${item.title}`}
               className="mx-auto block aspect-[2/3] w-[92%] max-h-[400px] sm:w-[85%]"
             >
@@ -41,7 +44,7 @@ export default function RelatedInstruments({
                 />
               </div>
             </Link>
-            <Link href={`${basePath}/${item.slug}`} className="group/label block px-1 pb-1">
+            <Link href={localePath(locale, `${basePath}/${item.slug}`)} className="group/label block px-1 pb-1">
               <span className="mx-auto mt-4 block h-px w-[30px] bg-[#c9ab7c]" />
               <span className="mt-3 block text-[0.95rem] leading-[1.25] font-medium tracking-[0.13em] text-[#1f1b18] uppercase transition-colors duration-200 ease-out group-hover/label:text-[#a97f34] sm:mt-3.5 sm:text-[1.15rem]">
                 {item.title}

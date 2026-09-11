@@ -1,37 +1,20 @@
-const features = [
-  {
-    title: "Master Luthier Representation",
-    body: "We represent a refined circle of exceptional master luthiers. Each maker’s work is chosen for individuality, craftsmanship, tonal depth, and long-term potential.",
-  },
-  {
-    title: "High-End Handcrafted Instruments",
-    body: "Our focus is exclusively on individually hand-crafted instruments — not mass-produced student models — allowing musicians to explore character, resonance, and true craftsmanship.",
-  },
-  {
-    title: "Trusted by Musicians",
-    body: "Players and teachers choose us for our honest guidance, reliable sourcing, and commitment to instruments that perform beautifully under real artistic demands.",
-  },
-  {
-    title: "Curated Bows & Accessories",
-    body: "Alongside instruments, we provide carefully selected bows, cases, and fittings — ensuring musicians have everything they need in one trusted place.",
-  },
-];
+import { type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n";
 
-export default function WhyChooseSection() {
+export default function WhyChooseSection({ locale = "en" }: { locale?: Locale }) {
+  const t = getDictionary(locale);
+  const features = t.whyChoose.features;
   return (
     <section className="mx-auto mt-20 grid max-w-[1350px] grid-cols-1 gap-12 px-7 py-20 font-sans text-[#0f172a] md:grid-cols-[0.95fr_1.35fr] md:items-center md:gap-6">
       <div className="pt-6">
         <p className="mb-3.5 text-[0.82rem] font-semibold tracking-[0.22em] text-[#a97f34] uppercase">
-          Fine String Instruments
+          {t.whyChoose.kicker}
         </p>
         <h2 className="text-[2.4rem] leading-[1.1] font-extrabold md:text-[3.1rem]">
-          Why Victoria Strings London?
+          {t.whyChoose.heading}
         </h2>
         <p className="mt-6 max-w-[34rem] text-[1.1rem] leading-[1.8] text-[#4b5563]">
-          Victoria Strings represents an exclusive selection of fine
-          violins, violas, cellos, and double basses crafted by outstanding
-          makers &mdash; curated for musicians seeking artistry,
-          authenticity, and lasting musical value.
+          {t.whyChoose.intro}
         </p>
       </div>
 

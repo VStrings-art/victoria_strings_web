@@ -1,37 +1,40 @@
 import type { Metadata } from "next";
 import type { Instrument } from "./instrument-types";
+import { localePath, type Locale } from "@/i18n/config";
+import { localise } from "@/i18n";
+import { languageAlternates } from "./page-seo";
 
 const SITE_URL = "https://victoriastrings.com";
 
 /**
- * Share cards and page titles for a single instrument. Falls back to the
- * category defaults when the slug does not resolve, so an unknown URL still
- * renders sensible metadata before notFound() takes over.
+ * Share cards and page titles for a single instrument. Names are proper nouns
+ * and stay as they are; the description follows the visitor's language.
  */
 export function instrumentMetadata(
-  instrument: Instrument | undefined,
+  all: Instrument[],
+  slug: string,
   category: string,
-  basePath: string,
+  locale: Locale,
 ): Metadata {
-  if (!instrument) {
-    return { title: `${category} | Victoria Strings London` };
-  }
+  const found = all.find((i) => i.slug === slug);
+  if (!found) return { title: "Victoria Strings London" };
 
+  const instrument = localise(found, locale);
   const title = `${instrument.title} | Victoria Strings London`;
-  const url = `${basePath}/${instrument.slug}`;
+  const path = `/${category}/${slug}`;
   // Purpose-built 1200x630 card: social scrapers crop to 1.91:1, which would
   // otherwise slice the middle out of a full-length instrument photograph.
-  const card = `/og${basePath}-${instrument.slug}.jpg`;
+  const card = `/og/${category}-${slug}.jpg`;
 
   return {
     title,
     description: instrument.caption,
-    alternates: { canonical: url },
+    alternates: { canonical: localePath(locale, path), languages: languageAlternates(path) },
     openGraph: {
       type: "website",
       title,
       description: instrument.caption,
-      url,
+      url: localePath(locale, path),
       siteName: "Victoria Strings London",
       images: [{ url: card, width: 1200, height: 630, alt: instrument.title }],
     },

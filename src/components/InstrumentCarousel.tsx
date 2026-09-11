@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n";
 
 const SLIDE_MS = 6000;
 
@@ -9,11 +11,14 @@ export default function InstrumentCarousel({
   images: rawImages,
   caption,
   title,
+  locale = "en",
 }: {
   images: string[];
   caption: string;
   title?: string;
+  locale?: Locale;
 }) {
+  const t = getDictionary(locale);
   // Some instruments only have one or two photographs; showing the same shot
   // twice would read as a broken slideshow, so collapse repeats.
   const images = Array.from(new Set(rawImages));
@@ -117,11 +122,11 @@ export default function InstrumentCarousel({
               href="#contact"
               className="inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-[#7b1d1b] px-6 py-3.5 text-center text-[12px] tracking-[0.1em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:gap-2.5 sm:px-9 sm:py-4 sm:text-[14px] sm:tracking-[0.16em]"
             >
-              Enquire About This Instrument
+              {t.detail.enquire}
               <span aria-hidden="true">&#8594;</span>
             </a>
             <p className="text-center font-sans text-[13px] text-[#6b6560] sm:text-[14px]">
-              Price on request &middot; Trials in London by appointment
+              {t.detail.priceNote}
             </p>
           </div>
         )}

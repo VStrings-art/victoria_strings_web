@@ -1,12 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const categoryLinks = [
-  { href: "/violin", label: "Violins" },
-  { href: "/viola", label: "Violas" },
-  { href: "/cello", label: "Cellos" },
-  { href: "/double-bass", label: "Double Basses" },
-];
+import { type Locale, localePath } from "@/i18n/config";
+import { getDictionary } from "@/i18n";
 
 const socialLinks = [
   {
@@ -31,7 +26,14 @@ const socialLinks = [
   },
 ];
 
-export default function Footer() {
+export default function Footer({ locale = "en" }: { locale?: Locale }) {
+  const t = getDictionary(locale);
+  const categoryLinks = [
+    { href: "/violin", label: t.categories.violins },
+    { href: "/viola", label: t.categories.violas },
+    { href: "/cello", label: t.categories.cellos },
+    { href: "/double-bass", label: t.categories.doubleBasses },
+  ];
   return (
     <footer className="relative w-full bg-white pt-[140px] font-display">
       <div
@@ -49,7 +51,7 @@ export default function Footer() {
             {categoryLinks.map((c) => (
               <li key={c.href}>
                 <Link
-                  href={c.href}
+                  href={localePath(locale, c.href)}
                   className="text-[17px] font-semibold text-[#7b1d1b] transition-colors hover:underline"
                 >
                   {c.label}
@@ -87,23 +89,23 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-[17px] leading-[1.8] font-medium text-[#222] md:text-right">
-          <p className="font-bold">Try our instruments</p>
-          <p>Open Mon&ndash;Fri</p>
-          <p>9:00am &ndash; 6:00pm (London time)</p>
-          <p>Available by appointment only</p>
+          <p className="font-bold">{t.footer.tryTitle}</p>
+          <p>{t.footer.openDays}</p>
+          <p>{t.footer.hours}</p>
+          <p>{t.footer.byAppointment}</p>
         </div>
       </div>
 
       <div className="relative z-[5] mx-auto max-w-[1400px] px-6 pb-8 md:px-14">
         <div className="mx-auto mb-6 h-px w-full max-w-[420px] bg-black/10" />
         <p className="text-center font-sans text-[13px] leading-[1.9] font-medium text-[#444]">
-          Victoria Strings London &middot; Registered in England &amp; Wales
+          {t.footer.registered}
           <span className="hidden md:inline"> &middot; </span>
           <br className="md:hidden" />
-          Company No. 13139549
+          {t.footer.companyNo}
         </p>
         <p className="mt-1.5 text-center font-sans text-[13px] font-medium text-[#666]">
-          Copyright &copy; {new Date().getFullYear()} Victoria Strings. All rights reserved.
+          Copyright &copy; {new Date().getFullYear()} Victoria Strings. {t.footer.rights}
         </p>
       </div>
     </footer>
