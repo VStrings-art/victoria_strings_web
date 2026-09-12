@@ -2,13 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { type Locale, localePath } from "@/i18n/config";
+import {
+  LOCALES,
+  LOCALE_NAMES,
+  localePath,
+  stripLocale,
+  type Locale,
+} from "@/i18n/config";
 import { getDictionary } from "@/i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header({ locale = "en" }: { locale?: Locale }) {
   const t = getDictionary(locale);
+  const pathname = usePathname() ?? "/";
   const links = [
     { href: "/", label: t.nav.home },
     { href: "/violin", label: t.nav.violin },
@@ -68,27 +76,27 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
               <span className="absolute -bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#f7e3a4] via-[#f2c869] to-[#c48a3a] transition-all duration-250 group-hover:w-full" />
             </Link>
           ))}
+          {/* Below lg the whole nav collapses, and the language control goes
+              with it rather than standing alone beside the menu button. */}
+          <LanguageSwitcher locale={locale} />
         </nav>
 
-        {/* The language control sits in the top-right corner at every width,
-            not only where the desktop nav appears. */}
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher locale={locale} />
-
-          <button
-            className="flex flex-col gap-1.5 p-1 text-white lg:hidden"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen((v) => !v)}
-          >
-            <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-6 rounded-full bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
-          </button>
-        </div>
+        <button
+          className="flex flex-col gap-1.5 p-1 text-white lg:hidden"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
+          <span className={`block h-0.5 w-6 rounded-full bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-0.5 w-6 rounded-full bg-current transition-transform duration-200 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+        </button>
       </div>
 
       {menuOpen && (
-        <div className="flex flex-col gap-1 border-t border-white/10 bg-[rgba(0,0,0,0.92)] px-6 py-6 lg:hidden">
+        // Opaque, not 92%: at that alpha the hero headline ghosted through the
+        // panel. It also scrolls, so the language list stays reachable on a
+        // short screen.
+        <div className="flex max-h-[calc(100svh-88px)] flex-col gap-1 overflow-y-auto border-t border-white/10 bg-[#0b0a09] px-6 py-6 lg:hidden">
           {links.map(({ href, label }) => (
             <Link
               key={href}
@@ -97,6 +105,23 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
               className="rounded-lg px-3 py-2.5 text-base uppercase tracking-wide text-white hover:bg-white/5 hover:text-[#f2c869]"
             >
               {label}
+            </Link>
+          ))}
+
+          <p className="mt-5 mb-1 border-t border-white/10 px-3 pt-5 font-sans text-[11px] font-semibold tracking-[0.22em] text-white/45 uppercase">
+            {t.nav.language}
+          </p>
+          {LOCALES.map((l) => (
+            <Link
+              key={l}
+              href={localePath(l, stripLocale(pathname))}
+              hrefLang={l}
+              onClick={() => setMenuOpen(false)}
+              className={`rounded-lg px-3 py-2.5 text-base tracking-wide transition-colors hover:bg-white/5 ${
+                l === locale ? "text-[#f2c869]" : "text-white/80 hover:text-white"
+              }`}
+            >
+              {LOCALE_NAMES[l]}
             </Link>
           ))}
         </div>
