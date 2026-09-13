@@ -1,4 +1,4 @@
-export const LOCALES = ["en", "de", "fr", "it", "es"] as const;
+export const LOCALES = ["en", "de", "fr", "it", "es", "ja", "ko"] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = "en";
@@ -13,6 +13,8 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   fr: "Français",
   it: "Italiano",
   es: "Español",
+  ja: "日本語",
+  ko: "한국어",
 };
 
 /** Short code shown in the header switcher. */
@@ -22,6 +24,8 @@ export const LOCALE_SHORT: Record<Locale, string> = {
   fr: "FR",
   it: "IT",
   es: "ES",
+  ja: "JA",
+  ko: "KO",
 };
 
 /** BCP-47 tags for <html lang> and hreflang. */
@@ -31,6 +35,8 @@ export const LOCALE_TAGS: Record<Locale, string> = {
   fr: "fr",
   it: "it",
   es: "es",
+  ja: "ja",
+  ko: "ko",
 };
 
 export function isLocale(value: string): value is Locale {

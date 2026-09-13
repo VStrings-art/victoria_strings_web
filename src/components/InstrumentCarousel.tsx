@@ -19,6 +19,7 @@ export default function InstrumentCarousel({
   locale?: Locale;
 }) {
   const t = getDictionary(locale);
+  const cjk = locale === "ja" || locale === "ko";
   // Some instruments only have one or two photographs; showing the same shot
   // twice would read as a broken slideshow, so collapse repeats.
   const images = Array.from(new Set(rawImages));
@@ -108,10 +109,25 @@ export default function InstrumentCarousel({
           </div>
         )}
 
+        {/* Petit Formal Script carries no Japanese or Korean glyphs, so those
+            two fall back to the display serif — a Mincho or Myeongjo face —
+            at a size and leading that suit the denser script. */}
         <p
           key={caption}
-          className="animate-caption-in mx-auto mt-6 w-[min(1200px,92vw)] text-center font-script text-gold-600 [text-shadow:0_10px_28px_rgba(179,138,90,0.14)]"
-          style={{ fontSize: "clamp(1.45rem, 5vw, 3.15rem)", lineHeight: 1.15 }}
+          className={`animate-caption-in mx-auto mt-6 w-[min(1200px,92vw)] text-center text-gold-600 [text-shadow:0_10px_28px_rgba(179,138,90,0.14)] ${
+            cjk ? "font-display" : "font-script"
+          }`}
+          style={
+            cjk
+              ? {
+                  fontSize: "clamp(1.15rem, 3.4vw, 2.2rem)",
+                  lineHeight: 1.75,
+                  // Cormorant defaults to old-style figures, which set "1711"
+                  // at uneven heights beside kanji and hangul.
+                  fontVariantNumeric: "lining-nums",
+                }
+              : { fontSize: "clamp(1.45rem, 5vw, 3.15rem)", lineHeight: 1.15 }
+          }
         >
           {caption}
         </p>

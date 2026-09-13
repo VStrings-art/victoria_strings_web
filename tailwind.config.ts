@@ -9,8 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: [
+          "var(--font-display)",
+          "Georgia",
+          // Japanese, then Korean, then anything with the glyph
+          "Hiragino Mincho ProN",
+          "Yu Mincho",
+          "Noto Serif JP",
+          "Apple SD Gothic Neo",
+          "Malgun Gothic",
+          "Noto Serif KR",
+          "serif",
+        ],
+        sans: [
+          "var(--font-sans)",
+          "system-ui",
+          "Hiragino Sans",
+          "Yu Gothic",
+          "Noto Sans JP",
+          "Apple SD Gothic Neo",
+          "Malgun Gothic",
+          "Noto Sans KR",
+          "sans-serif",
+        ],
         script: ["var(--font-script)", "cursive"],
       },
       colors: {

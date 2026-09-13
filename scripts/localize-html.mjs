@@ -6,7 +6,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const OUT = "out";
-const LOCALE_TAGS = { de: "de", fr: "fr", it: "it", es: "es" };
+const LOCALE_TAGS = { de: "de", fr: "fr", it: "it", es: "es", ja: "ja", ko: "ko" };
 
 async function htmlFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true });

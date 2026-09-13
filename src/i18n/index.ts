@@ -4,16 +4,20 @@ import { de } from "./dictionaries/de";
 import { fr } from "./dictionaries/fr";
 import { it } from "./dictionaries/it";
 import { es } from "./dictionaries/es";
+import { ja } from "./dictionaries/ja";
+import { ko } from "./dictionaries/ko";
 
 import type { InstrumentText } from "./instruments/types";
 import { instrumentsDe } from "./instruments/de";
 import { instrumentsFr } from "./instruments/fr";
 import { instrumentsIt } from "./instruments/it";
 import { instrumentsEs } from "./instruments/es";
+import { instrumentsJa } from "./instruments/ja";
+import { instrumentsKo } from "./instruments/ko";
 
 import type { Instrument } from "@/lib/instrument-types";
 
-const DICTIONARIES: Record<Locale, Dictionary> = { en, de, fr, it, es };
+const DICTIONARIES: Record<Locale, Dictionary> = { en, de, fr, it, es, ja, ko };
 
 /** English lives in the instrument data itself, so it has no override table. */
 const INSTRUMENT_TEXT: Record<Locale, Record<string, InstrumentText>> = {
@@ -22,6 +26,8 @@ const INSTRUMENT_TEXT: Record<Locale, Record<string, InstrumentText>> = {
   fr: instrumentsFr,
   it: instrumentsIt,
   es: instrumentsEs,
+  ja: instrumentsJa,
+  ko: instrumentsKo,
 };
 
 export function getDictionary(locale: Locale): Dictionary {
