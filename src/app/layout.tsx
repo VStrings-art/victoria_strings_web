@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Petit_Formal_Script } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { GOOGLE_ADS_ID } from "@/lib/gtag";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -108,6 +110,20 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+
+        {/* Google Ads tag. next/script keeps one copy per page and loads it
+            after the page is interactive, so it never delays first paint. */}
+        <Script
+          id="gtag-src"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`}
+        </Script>
       </body>
     </html>
   );

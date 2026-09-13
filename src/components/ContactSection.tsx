@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n";
+import { CONVERSIONS, trackConversion } from "@/lib/gtag";
 
 const WEB3FORMS_ACCESS_KEY = "4e69d7b4-fd9c-4648-b5cb-78826ed514a2";
 
@@ -57,6 +58,7 @@ export default function ContactSection({
       const result = await res.json();
       if (result.success) {
         setStatus("success");
+        trackConversion(CONVERSIONS.enquiryForm);
         form.reset();
       } else {
         setStatus("error");
@@ -100,6 +102,7 @@ export default function ContactSection({
                 </div>
                 <a
                   href="https://wa.me/447521071557"
+                  onClick={() => trackConversion(CONVERSIONS.whatsapp)}
                   className="text-[17px] font-medium text-[#222] transition-colors hover:text-[#7b1d1b]"
                 >
                   +44 7521 071557
@@ -120,6 +123,7 @@ export default function ContactSection({
                 </div>
                 <a
                   href="mailto:sales@victoriastrings.com"
+                  onClick={() => trackConversion(CONVERSIONS.email)}
                   className="text-[17px] font-medium text-[#222] transition-colors hover:text-[#7b1d1b]"
                 >
                   sales@victoriastrings.com
@@ -211,7 +215,11 @@ export default function ContactSection({
             {status === "error" && (
               <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
                 {t.contact.errorBefore}
-                <a href="mailto:sales@victoriastrings.com" className="underline">
+                <a
+                  href="mailto:sales@victoriastrings.com"
+                  onClick={() => trackConversion(CONVERSIONS.email)}
+                  className="underline"
+                >
                   sales@victoriastrings.com
                 </a>
                 .
@@ -220,7 +228,11 @@ export default function ContactSection({
             {status === "flagged" && (
               <p className="mt-4 text-[15px] font-medium text-[#7b1d1b]">
                 {t.contact.flaggedBefore}
-                <a href="mailto:sales@victoriastrings.com" className="underline">
+                <a
+                  href="mailto:sales@victoriastrings.com"
+                  onClick={() => trackConversion(CONVERSIONS.email)}
+                  className="underline"
+                >
                   sales@victoriastrings.com
                 </a>
                 .
