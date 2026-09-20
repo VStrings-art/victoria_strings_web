@@ -17,6 +17,7 @@ export type EventItem = {
   publishedAt: string;
   /** Looked up in the dictionary so the badge follows the visitor's language. */
   status: "open" | "upcoming" | "closed";
+  /** Portrait artwork, shown whole rather than cropped into a banner. */
   image: string;
   imageAlt: string;
   /** mailto: or https:. The card and the detail page both link here. */
@@ -29,8 +30,8 @@ export const events: EventItem[] = [
     slug: "fellowship-programme",
     publishedAt: "2026-09-20",
     status: "open",
-    image: "/images/2026/03/violin_player.webp",
-    imageAlt: "A young player with a violin",
+    image: "/images/2026/events/fellowship-programme.webp",
+    imageAlt: "Fellowship Programme announcement poster",
     ctaHref:
       "mailto:sales@victoriastrings.com?subject=Fellowship%20Programme%20nomination",
     text: {

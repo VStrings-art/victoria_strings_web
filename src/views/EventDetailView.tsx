@@ -31,7 +31,7 @@ export default function EventDetailView({
             alt=""
             fill
             priority
-            className="object-cover opacity-[0.16]"
+            className="object-cover object-top opacity-[0.14]"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-ink-900/80 via-ink-900/70 to-ink-900" />
@@ -59,6 +59,18 @@ export default function EventDetailView({
         </section>
 
         <section className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
+          {/* The announcement as it was designed, shown whole. */}
+          <figure className="mx-auto mb-16 w-full max-w-[440px] md:mb-20">
+            <Image
+              src={event.image}
+              alt={event.imageAlt}
+              width={1215}
+              height={1519}
+              className="h-auto w-full rounded-[4px] shadow-[0_22px_60px_rgba(0,0,0,0.22)]"
+              sizes="(min-width: 768px) 440px, 92vw"
+            />
+          </figure>
+
           <div className="mx-auto max-w-[46rem]">
             <dl className="flex flex-col gap-12 md:gap-14">
               {text.sections.map((s) => (

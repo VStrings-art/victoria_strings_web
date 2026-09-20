@@ -11,6 +11,8 @@ export function eventMetadata(slug: string, locale: Locale): Metadata {
   const text = eventText(event, locale);
   const title = `${text.title} | Victoria Strings London`;
   const path = `/events/${slug}`;
+  // Social scrapers crop to 1.91:1; a portrait poster would lose its title.
+  const card = `/og/events-${slug}.jpg`;
 
   return {
     title,
@@ -22,13 +24,13 @@ export function eventMetadata(slug: string, locale: Locale): Metadata {
       description: text.summary,
       url: localePath(locale, path),
       siteName: "Victoria Strings London",
-      images: [{ url: event.image, alt: text.title }],
+      images: [{ url: card, width: 1200, height: 630, alt: text.title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: text.summary,
-      images: [event.image],
+      images: [card],
     },
   };
 }

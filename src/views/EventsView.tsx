@@ -41,18 +41,18 @@ export default function EventsView({ locale }: { locale: Locale }) {
                 const href = localePath(locale, `/events/${event.slug}`);
                 return (
                   <li key={event.slug}>
-                    <article className="group grid grid-cols-1 gap-7 md:grid-cols-[1.05fr_1.2fr] md:items-center md:gap-14">
+                    <article className="group grid grid-cols-1 gap-7 md:grid-cols-[minmax(0,420px)_1fr] md:items-center md:gap-14">
                       <Link
                         href={href}
                         aria-label={text.title}
-                        className="relative block aspect-[4/3] w-full overflow-hidden rounded-[6px] bg-ink-100 md:aspect-[5/4]"
+                        className="relative mx-auto block aspect-[4/5] w-full max-w-[380px] overflow-hidden rounded-[4px] bg-ink-900 shadow-[0_18px_44px_rgba(0,0,0,0.18)] md:mx-0 md:max-w-[420px]"
                       >
                         <Image
                           src={event.image}
                           alt={event.imageAlt}
                           fill
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                          sizes="(min-width: 768px) 46vw, 92vw"
+                          sizes="(min-width: 768px) 420px, 92vw"
                         />
                       </Link>
 
