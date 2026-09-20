@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PosterLightbox from "@/components/PosterLightbox";
@@ -41,16 +42,31 @@ export default function EventsView({ locale }: { locale: Locale }) {
                   <li key={event.slug}>
                     <article className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,420px)_1fr] md:items-center md:gap-16">
                       <div className="mx-auto w-full max-w-[380px] md:mx-0 md:max-w-[420px]">
-                        <PosterLightbox
-                          src={event.image}
-                          alt={event.imageAlt}
-                          downloadSrc={event.downloadSrc}
-                          labels={{
-                            open: t.events.viewPoster,
-                            close: t.events.close,
-                            download: t.events.download,
-                          }}
-                        />
+                        {event.display === "poster" && event.downloadSrc ? (
+                          <PosterLightbox
+                            src={event.image}
+                            alt={event.imageAlt}
+                            downloadSrc={event.downloadSrc}
+                            labels={{
+                              open: t.events.viewPoster,
+                              close: t.events.close,
+                              download: t.events.download,
+                            }}
+                          />
+                        ) : (
+                          // A mark rather than an announcement: shown whole on a
+                          // quiet panel, with nothing to enlarge or download.
+                          <div className="flex aspect-square w-full items-center justify-center rounded-[4px] border border-black/[0.07] bg-cream-100 p-10 sm:p-14">
+                            <Image
+                              src={event.image}
+                              alt={event.imageAlt}
+                              width={750}
+                              height={750}
+                              className="h-auto w-full max-w-[240px]"
+                              sizes="(min-width: 768px) 240px, 60vw"
+                            />
+                          </div>
+                        )}
                       </div>
 
                       <div>
@@ -65,19 +81,16 @@ export default function EventsView({ locale }: { locale: Locale }) {
                           {text.summary}
                         </p>
 
-                        <div className="mt-9 flex flex-col items-start gap-3.5">
+                        <div className="mt-9">
                           <a
                             href={event.ctaHref}
+                            {...(event.ctaHref.startsWith("http")
+                              ? { target: "_blank", rel: "noreferrer" }
+                              : {})}
                             className="inline-flex max-w-full items-center justify-center gap-2.5 rounded-full bg-[#7b1d1b] px-7 py-3.5 text-center font-sans text-[12px] font-semibold tracking-[0.14em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:px-9 sm:text-[13px]"
                           >
                             {text.ctaLabel}
                             <span aria-hidden="true">&#8594;</span>
-                          </a>
-                          <a
-                            href="mailto:sales@victoriastrings.com"
-                            className="font-sans text-[0.95rem] text-[#6b6560] underline-offset-4 transition-colors hover:text-[#a97f34] hover:underline"
-                          >
-                            sales@victoriastrings.com
                           </a>
                         </div>
                       </div>

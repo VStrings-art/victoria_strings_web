@@ -176,6 +176,7 @@ export const es: Dictionary = {
     status: {
       open: "Abierto",
       upcoming: "Próximamente",
+      news: "Noticia",
       closed: "Cerrado",
     },
   },

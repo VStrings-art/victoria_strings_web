@@ -176,6 +176,7 @@ export const ja: Dictionary = {
     status: {
       open: "受付中",
       upcoming: "近日公開",
+      news: "お知らせ",
       closed: "受付終了",
     },
   },

@@ -173,6 +173,7 @@ export const en = {
     status: {
       open: "Open now",
       upcoming: "Coming soon",
+      news: "News",
       closed: "Closed",
     },
   },

@@ -176,6 +176,7 @@ export const ko: Dictionary = {
     status: {
       open: "접수 중",
       upcoming: "공개 예정",
+      news: "소식",
       closed: "마감",
     },
   },
