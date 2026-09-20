@@ -169,9 +169,10 @@ export const it: Dictionary = {
     heading: "Che cosa succede in Victoria Strings",
     intro:
       "Programmi, annunci e notizie dalla bottega. Aggiorniamo questa pagina ogni volta che c'è qualcosa da raccontare.",
-    readMore: "Scopri di più",
     empty: "Al momento non ci sono annunci — torna a trovarci presto.",
-    backToEvents: "Tutti gli eventi",
+    download: "Scarica la locandina",
+    close: "Chiudi",
+    viewPoster: "Vedi la locandina intera",
     status: {
       open: "Aperto",
       upcoming: "In arrivo",

@@ -1,13 +1,8 @@
-export type EventSection = {
-  heading: string;
-  body: string;
-};
-
 /** The wording of one event. English lives here; translations sit in src/i18n/events. */
 export type EventText = {
   title: string;
+  /** One or two sentences. The poster carries the full detail. */
   summary: string;
-  sections: EventSection[];
   ctaLabel: string;
 };
 
@@ -20,6 +15,9 @@ export type EventItem = {
   /** Portrait artwork, shown whole rather than cropped into a banner. */
   image: string;
   imageAlt: string;
+  /** What the download button saves. JPEG, not WebP: people forward these
+   *  into mail and messaging apps that still choke on WebP. */
+  downloadSrc: string;
   /** mailto: or https:. The card and the detail page both link here. */
   ctaHref: string;
   text: EventText;
@@ -32,25 +30,13 @@ export const events: EventItem[] = [
     status: "open",
     image: "/images/2026/events/fellowship-programme.webp",
     imageAlt: "Fellowship Programme announcement poster",
+    downloadSrc: "/images/2026/events/Victoria-Strings-Fellowship-Programme.jpg",
     ctaHref:
       "mailto:sales@victoriastrings.com?subject=Fellowship%20Programme%20nomination",
     text: {
       title: "Fellowship Programme",
-      summary: "Free instrument loans for exceptional young string players.",
-      sections: [
-        {
-          heading: "What we offer",
-          body: "A professional violin, viola or cello crafted by our global master luthiers, on loan for one academic year, renewable. No cost and no purchase obligation; insurance covered by us.",
-        },
-        {
-          heading: "Who is eligible",
-          body: "String players aged 14–25 at conservatoire-preparation level or above, nominated by their teacher or institution anywhere in the UK.",
-        },
-        {
-          heading: "How to nominate",
-          body: "Email sales@victoriastrings.com with the student's name, age, instrument and a short note from their teacher. We'll arrange a trial.",
-        },
-      ],
+      summary:
+        "A professional violin, viola or cello by our master luthiers, on free loan for an academic year and renewable — no cost, no obligation to buy, insurance covered by us. Open to string players aged 14–25 anywhere in the UK, nominated by their teacher or institution.",
       ctaLabel: "Nominate a student",
     },
   },

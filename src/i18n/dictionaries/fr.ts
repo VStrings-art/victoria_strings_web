@@ -169,9 +169,10 @@ export const fr: Dictionary = {
     heading: "Ce qui se passe chez Victoria Strings",
     intro:
       "Programmes, annonces et actualités de l'atelier. Nous enrichissons cette page au fil des événements.",
-    readMore: "En savoir plus",
     empty: "Rien à annoncer pour le moment — revenez bientôt.",
-    backToEvents: "Toutes les actualités",
+    download: "Télécharger l'affiche",
+    close: "Fermer",
+    viewPoster: "Voir l'affiche en grand",
     status: {
       open: "Ouvert",
       upcoming: "Bientôt",

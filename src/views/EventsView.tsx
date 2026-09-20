@@ -1,9 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PosterLightbox from "@/components/PosterLightbox";
 import { sortedEvents } from "@/lib/events";
-import { type Locale, localePath } from "@/i18n/config";
+import { type Locale } from "@/i18n/config";
 import { getDictionary, eventText } from "@/i18n";
 
 export default function EventsView({ locale }: { locale: Locale }) {
@@ -35,47 +34,52 @@ export default function EventsView({ locale }: { locale: Locale }) {
               {t.events.empty}
             </p>
           ) : (
-            <ul className="flex flex-col gap-14 md:gap-20">
+            <ul className="flex flex-col gap-20 md:gap-28">
               {items.map((event) => {
                 const text = eventText(event, locale);
-                const href = localePath(locale, `/events/${event.slug}`);
                 return (
                   <li key={event.slug}>
-                    <article className="group grid grid-cols-1 gap-7 md:grid-cols-[minmax(0,420px)_1fr] md:items-center md:gap-14">
-                      <Link
-                        href={href}
-                        aria-label={text.title}
-                        className="relative mx-auto block aspect-[4/5] w-full max-w-[380px] overflow-hidden rounded-[4px] bg-ink-900 shadow-[0_18px_44px_rgba(0,0,0,0.18)] md:mx-0 md:max-w-[420px]"
-                      >
-                        <Image
+                    <article className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,420px)_1fr] md:items-center md:gap-16">
+                      <div className="mx-auto w-full max-w-[380px] md:mx-0 md:max-w-[420px]">
+                        <PosterLightbox
                           src={event.image}
                           alt={event.imageAlt}
-                          fill
-                          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                          sizes="(min-width: 768px) 420px, 92vw"
+                          downloadSrc={event.downloadSrc}
+                          labels={{
+                            open: t.events.viewPoster,
+                            close: t.events.close,
+                            download: t.events.download,
+                          }}
                         />
-                      </Link>
+                      </div>
 
                       <div>
                         <p className="font-sans text-[0.66rem] font-semibold tracking-[0.24em] text-[#a97f34] uppercase sm:text-[0.7rem]">
                           {t.events.status[event.status]}
                         </p>
-                        <h2 className="mt-4 font-display text-[1.9rem] leading-[1.15] text-[#1f1b18] md:text-[2.6rem]">
-                          <Link href={href} className="transition-colors hover:text-[#a97f34]">
-                            {text.title}
-                          </Link>
+                        <h2 className="mt-4 font-display text-[2rem] leading-[1.15] text-[#1f1b18] md:text-[2.8rem]">
+                          {text.title}
                         </h2>
                         <div className="mt-5 h-px w-[52px] bg-[#c9ab7c]" />
-                        <p className="mt-6 max-w-[46ch] text-[1.02rem] leading-[1.8] text-[#5b5550] md:text-[1.08rem]">
+                        <p className="mt-7 max-w-[52ch] text-[1.02rem] leading-[1.85] text-[#5b5550] md:text-[1.08rem]">
                           {text.summary}
                         </p>
-                        <Link
-                          href={href}
-                          className="mt-7 inline-flex items-center gap-2 font-sans text-[0.78rem] font-semibold tracking-[0.18em] text-[#1f1b18] uppercase transition-colors hover:text-[#a97f34]"
-                        >
-                          {t.events.readMore}
-                          <span aria-hidden="true">&#8594;</span>
-                        </Link>
+
+                        <div className="mt-9 flex flex-col items-start gap-3.5">
+                          <a
+                            href={event.ctaHref}
+                            className="inline-flex max-w-full items-center justify-center gap-2.5 rounded-full bg-[#7b1d1b] px-7 py-3.5 text-center font-sans text-[12px] font-semibold tracking-[0.14em] text-white uppercase transition-[transform,background-color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#5d1513] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:px-9 sm:text-[13px]"
+                          >
+                            {text.ctaLabel}
+                            <span aria-hidden="true">&#8594;</span>
+                          </a>
+                          <a
+                            href="mailto:sales@victoriastrings.com"
+                            className="font-sans text-[0.95rem] text-[#6b6560] underline-offset-4 transition-colors hover:text-[#a97f34] hover:underline"
+                          >
+                            sales@victoriastrings.com
+                          </a>
+                        </div>
                       </div>
                     </article>
                   </li>

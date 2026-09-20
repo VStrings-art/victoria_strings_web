@@ -1,36 +1,170 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/violin/violin-9", "destination": "/violin/danube", "permanent": true },
-    { "source": "/violin/violin-10", "destination": "/violin/loire", "permanent": true },
-    { "source": "/violin/violin-8", "destination": "/violin/seine", "permanent": true },
-    { "source": "/violin/158592", "destination": "/violin/thames", "permanent": true },
-    { "source": "/violin/cremonese-01", "destination": "/violin/rhine", "permanent": true },
-    { "source": "/violin/messiah-01", "destination": "/violin/tiber", "permanent": true },
-    { "source": "/violin/messiah-02", "destination": "/violin/arno", "permanent": true },
-    { "source": "/violin/cremonese-02", "destination": "/violin/douro", "permanent": true },
-    { "source": "/violin/messiah-03", "destination": "/violin/vltava", "permanent": true },
-    { "source": "/violin/messiah-04", "destination": "/violin/neva", "permanent": true },
-    { "source": "/violin/cremonese-03", "destination": "/violin/tagus", "permanent": true },
-    { "source": "/violin/violin-1", "destination": "/violin/ganges", "permanent": true },
-    { "source": "/violin/violin-2", "destination": "/violin/rhone", "permanent": true },
-    { "source": "/violin/violin-3", "destination": "/violin/volga", "permanent": true },
-    { "source": "/violin/violin-4", "destination": "/violin/yangtze", "permanent": true },
-    { "source": "/violin/violin-5", "destination": "/violin/garonne", "permanent": true },
-    { "source": "/violin/violin-6", "destination": "/violin/mekong", "permanent": true },
-    { "source": "/violin/violin-7", "destination": "/violin/nile", "permanent": true },
-    { "source": "/viola/viola-01", "destination": "/viola/como", "permanent": true },
-    { "source": "/viola/viola-02", "destination": "/viola/lucerne", "permanent": true },
-    { "source": "/viola/viola-03", "destination": "/viola/baikal", "permanent": true },
-    { "source": "/double-bass/doublebass-01", "destination": "/double-bass/andes", "permanent": true },
-    { "source": "/double-bass/doublebass-02", "destination": "/double-bass/atlas", "permanent": true },
-    { "source": "/cello/cello-01", "destination": "/cello/denali", "permanent": true },
-    { "source": "/cello/cello-02", "destination": "/cello/matterhorn", "permanent": true },
-    { "source": "/cello/cello-03", "destination": "/cello/annapurna", "permanent": true },
-    { "source": "/cello/cello-04", "destination": "/cello/olympus", "permanent": true },
-    { "source": "/cello/cello-05", "destination": "/cello/everest", "permanent": true },
-    { "source": "/cello/cello-06", "destination": "/cello/kilimanjaro", "permanent": true },
-    { "source": "/cello/cello-07", "destination": "/cello/fuji", "permanent": true },
-    { "source": "/luthiers", "destination": "/", "permanent": false }
+    {
+      "source": "/events/:slug",
+      "destination": "/events",
+      "permanent": false
+    },
+    {
+      "source": "/:locale(de|fr|it|es|ja|ko)/events/:slug",
+      "destination": "/:locale/events",
+      "permanent": false
+    },
+    {
+      "source": "/violin/violin-9",
+      "destination": "/violin/danube",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-10",
+      "destination": "/violin/loire",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-8",
+      "destination": "/violin/seine",
+      "permanent": true
+    },
+    {
+      "source": "/violin/158592",
+      "destination": "/violin/thames",
+      "permanent": true
+    },
+    {
+      "source": "/violin/cremonese-01",
+      "destination": "/violin/rhine",
+      "permanent": true
+    },
+    {
+      "source": "/violin/messiah-01",
+      "destination": "/violin/tiber",
+      "permanent": true
+    },
+    {
+      "source": "/violin/messiah-02",
+      "destination": "/violin/arno",
+      "permanent": true
+    },
+    {
+      "source": "/violin/cremonese-02",
+      "destination": "/violin/douro",
+      "permanent": true
+    },
+    {
+      "source": "/violin/messiah-03",
+      "destination": "/violin/vltava",
+      "permanent": true
+    },
+    {
+      "source": "/violin/messiah-04",
+      "destination": "/violin/neva",
+      "permanent": true
+    },
+    {
+      "source": "/violin/cremonese-03",
+      "destination": "/violin/tagus",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-1",
+      "destination": "/violin/ganges",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-2",
+      "destination": "/violin/rhone",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-3",
+      "destination": "/violin/volga",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-4",
+      "destination": "/violin/yangtze",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-5",
+      "destination": "/violin/garonne",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-6",
+      "destination": "/violin/mekong",
+      "permanent": true
+    },
+    {
+      "source": "/violin/violin-7",
+      "destination": "/violin/nile",
+      "permanent": true
+    },
+    {
+      "source": "/viola/viola-01",
+      "destination": "/viola/como",
+      "permanent": true
+    },
+    {
+      "source": "/viola/viola-02",
+      "destination": "/viola/lucerne",
+      "permanent": true
+    },
+    {
+      "source": "/viola/viola-03",
+      "destination": "/viola/baikal",
+      "permanent": true
+    },
+    {
+      "source": "/double-bass/doublebass-01",
+      "destination": "/double-bass/andes",
+      "permanent": true
+    },
+    {
+      "source": "/double-bass/doublebass-02",
+      "destination": "/double-bass/atlas",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-01",
+      "destination": "/cello/denali",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-02",
+      "destination": "/cello/matterhorn",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-03",
+      "destination": "/cello/annapurna",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-04",
+      "destination": "/cello/olympus",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-05",
+      "destination": "/cello/everest",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-06",
+      "destination": "/cello/kilimanjaro",
+      "permanent": true
+    },
+    {
+      "source": "/cello/cello-07",
+      "destination": "/cello/fuji",
+      "permanent": true
+    },
+    {
+      "source": "/luthiers",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }

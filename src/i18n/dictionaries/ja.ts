@@ -169,9 +169,10 @@ export const ja: Dictionary = {
     heading: "Victoria Strings の最新情報",
     intro:
       "工房からのプログラム、ご案内、お知らせです。新しい動きがあり次第、このページに追記していきます。",
-    readMore: "詳しく見る",
     empty: "ただいまお知らせはありません。またお立ち寄りください。",
-    backToEvents: "お知らせ一覧",
+    download: "ポスターをダウンロード",
+    close: "閉じる",
+    viewPoster: "ポスターを拡大して見る",
     status: {
       open: "受付中",
       upcoming: "近日公開",

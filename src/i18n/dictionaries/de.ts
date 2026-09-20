@@ -170,9 +170,10 @@ export const de: Dictionary = {
     heading: "Was es bei Victoria Strings Neues gibt",
     intro:
       "Programme, Ankündigungen und Neuigkeiten aus der Werkstatt. Wir ergänzen diese Seite, sobald es etwas zu berichten gibt.",
-    readMore: "Mehr erfahren",
     empty: "Derzeit gibt es nichts anzukündigen — schauen Sie bald wieder vorbei.",
-    backToEvents: "Alle Beiträge",
+    download: "Poster herunterladen",
+    close: "Schließen",
+    viewPoster: "Poster in voller Größe ansehen",
     status: {
       open: "Jetzt offen",
       upcoming: "Demnächst",

@@ -166,9 +166,10 @@ export const en = {
     heading: "What's Happening at Victoria Strings",
     intro:
       "Programmes, announcements and news from the workshop. We add to this page as things happen.",
-    readMore: "Read more",
     empty: "Nothing to announce just now — please check back soon.",
-    backToEvents: "All events",
+    download: "Download poster",
+    close: "Close",
+    viewPoster: "View the full poster",
     status: {
       open: "Open now",
       upcoming: "Coming soon",

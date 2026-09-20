@@ -169,9 +169,10 @@ export const ko: Dictionary = {
     heading: "Victoria Strings의 새로운 소식",
     intro:
       "공방에서 전하는 프로그램과 안내, 소식입니다. 새로운 일이 있을 때마다 이 페이지에 더해 갑니다.",
-    readMore: "자세히 보기",
     empty: "지금은 전해 드릴 소식이 없습니다. 곧 다시 찾아와 주세요.",
-    backToEvents: "전체 소식",
+    download: "포스터 내려받기",
+    close: "닫기",
+    viewPoster: "포스터 전체 보기",
     status: {
       open: "접수 중",
       upcoming: "공개 예정",

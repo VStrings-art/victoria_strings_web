@@ -169,9 +169,10 @@ export const es: Dictionary = {
     heading: "Qué ocurre en Victoria Strings",
     intro:
       "Programas, anuncios y noticias del taller. Vamos añadiendo a esta página a medida que suceden las cosas.",
-    readMore: "Leer más",
     empty: "Por ahora no hay nada que anunciar; vuelva pronto.",
-    backToEvents: "Todos los eventos",
+    download: "Descargar el cartel",
+    close: "Cerrar",
+    viewPoster: "Ver el cartel completo",
     status: {
       open: "Abierto",
       upcoming: "Próximamente",
