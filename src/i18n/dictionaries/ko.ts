@@ -7,6 +7,7 @@ export const ko: Dictionary = {
     viola: "비올라",
     cello: "첼로",
     doubleBass: "콘트라베이스",
+    events: "소식",
     language: "언어",
   },
 
@@ -37,6 +38,11 @@ export const ko: Dictionary = {
       title: "콘트라베이스 | Victoria Strings London",
       description:
         "깊이와 힘, 견고한 구조를 갖춘 콘트라베이스. Victoria Strings London의 명장 제작자들이 손으로 만들었습니다.",
+    },
+    events: {
+      title: "소식과 행사 | Victoria Strings London",
+      description:
+        "Victoria Strings London의 프로그램과 소식, 공지입니다. 젊은 현악 연주자에게 악기를 무상으로 대여하는 펠로우십 프로그램도 이곳에서 안내합니다.",
     },
   },
 
@@ -156,6 +162,21 @@ export const ko: Dictionary = {
     violaTitle: "깊이와 개성이 균형을 이루는 비올라",
     celloTitle: "존재감과 균형, 품격을 갖춘 첼로",
     bassTitle: "깊이와 힘, 견고한 구조의 콘트라베이스",
+  },
+
+  events: {
+    label: "소식과 행사",
+    heading: "Victoria Strings의 새로운 소식",
+    intro:
+      "공방에서 전하는 프로그램과 안내, 소식입니다. 새로운 일이 있을 때마다 이 페이지에 더해 갑니다.",
+    readMore: "자세히 보기",
+    empty: "지금은 전해 드릴 소식이 없습니다. 곧 다시 찾아와 주세요.",
+    backToEvents: "전체 소식",
+    status: {
+      open: "접수 중",
+      upcoming: "공개 예정",
+      closed: "마감",
+    },
   },
 
   detail: {

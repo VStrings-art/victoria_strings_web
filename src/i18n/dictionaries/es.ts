@@ -7,6 +7,7 @@ export const es: Dictionary = {
     viola: "Viola",
     cello: "Violonchelo",
     doubleBass: "Contrabajo",
+    events: "Eventos",
     language: "Idioma",
   },
 
@@ -37,6 +38,11 @@ export const es: Dictionary = {
       title: "Contrabajos | Victoria Strings London",
       description:
         "Contrabajos con profundidad, potencia e integridad estructural — hechos a mano por la red de maestros luthiers de Victoria Strings London.",
+    },
+    events: {
+      title: "Eventos y noticias | Victoria Strings London",
+      description:
+        "Programas, noticias y anuncios de Victoria Strings London, incluido nuestro Fellowship Programme de préstamo gratuito de instrumentos para jóvenes cuerdas.",
     },
   },
 
@@ -156,6 +162,21 @@ export const es: Dictionary = {
     violaTitle: "Violas refinadas, equilibradas en profundidad y carácter",
     celloTitle: "Violonchelos refinados, con presencia, equilibrio y autoridad",
     bassTitle: "Contrabajos con profundidad, potencia e integridad estructural",
+  },
+
+  events: {
+    label: "Eventos y noticias",
+    heading: "Qué ocurre en Victoria Strings",
+    intro:
+      "Programas, anuncios y noticias del taller. Vamos añadiendo a esta página a medida que suceden las cosas.",
+    readMore: "Leer más",
+    empty: "Por ahora no hay nada que anunciar; vuelva pronto.",
+    backToEvents: "Todos los eventos",
+    status: {
+      open: "Abierto",
+      upcoming: "Próximamente",
+      closed: "Cerrado",
+    },
   },
 
   detail: {

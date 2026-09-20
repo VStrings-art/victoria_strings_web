@@ -7,6 +7,7 @@ export const fr: Dictionary = {
     viola: "Alto",
     cello: "Violoncelle",
     doubleBass: "Contrebasse",
+    events: "Actualités",
     language: "Langue",
   },
 
@@ -37,6 +38,11 @@ export const fr: Dictionary = {
       title: "Contrebasses | Victoria Strings London",
       description:
         "Contrebasses alliant profondeur, puissance et solidité structurelle — faites main par le réseau de maîtres luthiers de Victoria Strings London.",
+    },
+    events: {
+      title: "Actualités & événements | Victoria Strings London",
+      description:
+        "Programmes, actualités et annonces de Victoria Strings London — dont notre Fellowship Programme de prêts d'instruments gratuits pour jeunes cordes.",
     },
   },
 
@@ -156,6 +162,21 @@ export const fr: Dictionary = {
     violaTitle: "Altos raffinés, équilibrés en profondeur et en caractère",
     celloTitle: "Violoncelles raffinés, alliant présence, équilibre et autorité",
     bassTitle: "Contrebasses alliant profondeur, puissance et solidité",
+  },
+
+  events: {
+    label: "Actualités",
+    heading: "Ce qui se passe chez Victoria Strings",
+    intro:
+      "Programmes, annonces et actualités de l'atelier. Nous enrichissons cette page au fil des événements.",
+    readMore: "En savoir plus",
+    empty: "Rien à annoncer pour le moment — revenez bientôt.",
+    backToEvents: "Toutes les actualités",
+    status: {
+      open: "Ouvert",
+      upcoming: "Bientôt",
+      closed: "Terminé",
+    },
   },
 
   detail: {

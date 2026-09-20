@@ -15,7 +15,16 @@ import { instrumentsEs } from "./instruments/es";
 import { instrumentsJa } from "./instruments/ja";
 import { instrumentsKo } from "./instruments/ko";
 
+import type { EventTexts } from "./events/types";
+import { eventsDe } from "./events/de";
+import { eventsFr } from "./events/fr";
+import { eventsIt } from "./events/it";
+import { eventsEs } from "./events/es";
+import { eventsJa } from "./events/ja";
+import { eventsKo } from "./events/ko";
+
 import type { Instrument } from "@/lib/instrument-types";
+import type { EventItem, EventText } from "@/lib/events";
 
 const DICTIONARIES: Record<Locale, Dictionary> = { en, de, fr, it, es, ja, ko };
 
@@ -29,6 +38,22 @@ const INSTRUMENT_TEXT: Record<Locale, Record<string, InstrumentText>> = {
   ja: instrumentsJa,
   ko: instrumentsKo,
 };
+
+/** English lives in the event data itself, so it has no override table. */
+const EVENT_TEXT: Record<Locale, EventTexts> = {
+  en: {},
+  de: eventsDe,
+  fr: eventsFr,
+  it: eventsIt,
+  es: eventsEs,
+  ja: eventsJa,
+  ko: eventsKo,
+};
+
+/** The event's wording in the given locale, falling back to English. */
+export function eventText(event: EventItem, locale: Locale): EventText {
+  return EVENT_TEXT[locale]?.[event.slug] ?? event.text;
+}
 
 export function getDictionary(locale: Locale): Dictionary {
   return DICTIONARIES[locale] ?? en;

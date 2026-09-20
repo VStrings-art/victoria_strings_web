@@ -33,6 +33,7 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
     { href: "/viola", label: t.categories.violas },
     { href: "/cello", label: t.categories.cellos },
     { href: "/double-bass", label: t.categories.doubleBasses },
+    { href: "/events", label: t.nav.events },
   ];
   return (
     <footer className="relative w-full bg-white pt-[140px] font-display">

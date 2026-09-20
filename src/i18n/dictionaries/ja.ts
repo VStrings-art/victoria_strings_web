@@ -7,6 +7,7 @@ export const ja: Dictionary = {
     viola: "ヴィオラ",
     cello: "チェロ",
     doubleBass: "コントラバス",
+    events: "イベント",
     language: "言語",
   },
 
@@ -37,6 +38,11 @@ export const ja: Dictionary = {
       title: "コントラバス｜Victoria Strings London",
       description:
         "深さと力、そして構造の確かさを備えたコントラバス。Victoria Strings London の名匠たちが手仕事で仕上げています。",
+    },
+    events: {
+      title: "イベント・お知らせ｜Victoria Strings London",
+      description:
+        "Victoria Strings London のプログラム、ニュース、お知らせ。若い弦楽器奏者に楽器を無償で貸し出すフェローシップ・プログラムもこちらから。",
     },
   },
 
@@ -156,6 +162,21 @@ export const ja: Dictionary = {
     violaTitle: "深みと個性が釣り合うヴィオラ",
     celloTitle: "存在感、均整、風格を備えたチェロ",
     bassTitle: "深さと力、確かな造りのコントラバス",
+  },
+
+  events: {
+    label: "イベント・お知らせ",
+    heading: "Victoria Strings の最新情報",
+    intro:
+      "工房からのプログラム、ご案内、お知らせです。新しい動きがあり次第、このページに追記していきます。",
+    readMore: "詳しく見る",
+    empty: "ただいまお知らせはありません。またお立ち寄りください。",
+    backToEvents: "お知らせ一覧",
+    status: {
+      open: "受付中",
+      upcoming: "近日公開",
+      closed: "受付終了",
+    },
   },
 
   detail: {

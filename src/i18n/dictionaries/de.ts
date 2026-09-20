@@ -7,6 +7,7 @@ export const de: Dictionary = {
     viola: "Bratsche",
     cello: "Violoncello",
     doubleBass: "Kontrabass",
+    events: "Aktuelles",
     language: "Sprache",
   },
 
@@ -37,6 +38,11 @@ export const de: Dictionary = {
       title: "Kontrabässe | Victoria Strings London",
       description:
         "Kontrabässe mit Tiefe, Kraft und struktureller Stabilität — handgefertigt vom Netzwerk der Meistergeigenbauer von Victoria Strings London.",
+    },
+    events: {
+      title: "Aktuelles & Veranstaltungen | Victoria Strings London",
+      description:
+        "Programme, Neuigkeiten und Ankündigungen von Victoria Strings London — darunter unser Fellowship-Programm mit kostenlosen Instrumentenleihgaben für junge Streicher.",
     },
   },
 
@@ -157,6 +163,21 @@ export const de: Dictionary = {
     violaTitle: "Edle Bratschen, ausgewogen in Tiefe und Charakter",
     celloTitle: "Edle Violoncelli mit Präsenz, Balance und Autorität",
     bassTitle: "Kontrabässe mit Tiefe, Kraft und struktureller Stabilität",
+  },
+
+  events: {
+    label: "Aktuelles",
+    heading: "Was es bei Victoria Strings Neues gibt",
+    intro:
+      "Programme, Ankündigungen und Neuigkeiten aus der Werkstatt. Wir ergänzen diese Seite, sobald es etwas zu berichten gibt.",
+    readMore: "Mehr erfahren",
+    empty: "Derzeit gibt es nichts anzukündigen — schauen Sie bald wieder vorbei.",
+    backToEvents: "Alle Beiträge",
+    status: {
+      open: "Jetzt offen",
+      upcoming: "Demnächst",
+      closed: "Abgeschlossen",
+    },
   },
 
   detail: {

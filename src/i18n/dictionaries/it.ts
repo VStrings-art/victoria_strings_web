@@ -7,6 +7,7 @@ export const it: Dictionary = {
     viola: "Viola",
     cello: "Violoncello",
     doubleBass: "Contrabbasso",
+    events: "Eventi",
     language: "Lingua",
   },
 
@@ -37,6 +38,11 @@ export const it: Dictionary = {
       title: "Contrabbassi | Victoria Strings London",
       description:
         "Contrabbassi con profondità, potenza e solidità strutturale — costruiti a mano dalla rete di maestri liutai di Victoria Strings London.",
+    },
+    events: {
+      title: "Eventi e notizie | Victoria Strings London",
+      description:
+        "Programmi, notizie e annunci da Victoria Strings London — compreso il nostro Fellowship Programme di prestiti gratuiti di strumenti per giovani archi.",
     },
   },
 
@@ -156,6 +162,21 @@ export const it: Dictionary = {
     violaTitle: "Viole raffinate, equilibrate per profondità e carattere",
     celloTitle: "Violoncelli raffinati, con presenza, equilibrio e autorevolezza",
     bassTitle: "Contrabbassi con profondità, potenza e solidità strutturale",
+  },
+
+  events: {
+    label: "Eventi e notizie",
+    heading: "Che cosa succede in Victoria Strings",
+    intro:
+      "Programmi, annunci e notizie dalla bottega. Aggiorniamo questa pagina ogni volta che c'è qualcosa da raccontare.",
+    readMore: "Scopri di più",
+    empty: "Al momento non ci sono annunci — torna a trovarci presto.",
+    backToEvents: "Tutti gli eventi",
+    status: {
+      open: "Aperto",
+      upcoming: "In arrivo",
+      closed: "Chiuso",
+    },
   },
 
   detail: {

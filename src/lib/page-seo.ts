@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LOCALES, LOCALE_TAGS, localePath, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n";
 
-type MetaKey = "home" | "violin" | "viola" | "cello" | "doubleBass";
+type MetaKey = "home" | "violin" | "viola" | "cello" | "doubleBass" | "events";
 
 /** hreflang set for one shared path, so search engines pair the translations. */
 export function languageAlternates(path: string): Record<string, string> {

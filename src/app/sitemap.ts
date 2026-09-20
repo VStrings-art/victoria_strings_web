@@ -3,6 +3,7 @@ import { violins } from "@/lib/violins";
 import { violas } from "@/lib/violas";
 import { cellos } from "@/lib/cellos";
 import { doubleBasses } from "@/lib/double-basses";
+import { events } from "@/lib/events";
 import { LOCALES, LOCALE_TAGS, localePath } from "@/i18n/config";
 
 export const dynamic = "force-static";
@@ -16,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/viola",
     "/cello",
     "/double-bass",
+    "/events",
+    ...events.map((e) => `/events/${e.slug}`),
     ...violins.map((v) => `/violin/${v.slug}`),
     ...violas.map((v) => `/viola/${v.slug}`),
     ...cellos.map((c) => `/cello/${c.slug}`),

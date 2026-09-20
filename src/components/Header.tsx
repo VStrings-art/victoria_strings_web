@@ -23,6 +23,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
     { href: "/viola", label: t.nav.viola },
     { href: "/cello", label: t.nav.cello },
     { href: "/double-bass", label: t.nav.doubleBass },
+    { href: "/events", label: t.nav.events },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,12 +66,12 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={localePath(locale, href)}
-              className="group relative inline-block pb-1 text-[21px] font-semibold tracking-[0.16em] text-white uppercase transition-colors hover:text-[#f2c869]"
+              className="group relative inline-block pb-1 text-[16px] font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:text-[#f2c869] xl:text-[20px] xl:tracking-[0.16em]"
             >
               {label}
               <span className="absolute -bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#f7e3a4] via-[#f2c869] to-[#c48a3a] transition-all duration-250 group-hover:w-full" />

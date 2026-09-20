@@ -5,6 +5,7 @@ export const en = {
     viola: "Viola",
     cello: "Cello",
     doubleBass: "Double Bass",
+    events: "Events",
     language: "Language",
   },
 
@@ -34,6 +35,11 @@ export const en = {
       title: "Double Basses | Victoria Strings London",
       description:
         "Double basses with depth, power and structural integrity — handcrafted by Victoria Strings London's network of master luthiers.",
+    },
+    events: {
+      title: "Events & News | Victoria Strings London",
+      description:
+        "Programmes, news and announcements from Victoria Strings London — including our Fellowship Programme of free instrument loans for young string players.",
     },
   },
 
@@ -153,6 +159,21 @@ export const en = {
     violaTitle: "Refined Violas, Balanced in Depth and Character",
     celloTitle: "Refined Cellos with Presence, Balance & Authority",
     bassTitle: "Double Basses with Depth, Power & Structural Integrity",
+  },
+
+  events: {
+    label: "Events & News",
+    heading: "What's Happening at Victoria Strings",
+    intro:
+      "Programmes, announcements and news from the workshop. We add to this page as things happen.",
+    readMore: "Read more",
+    empty: "Nothing to announce just now — please check back soon.",
+    backToEvents: "All events",
+    status: {
+      open: "Open now",
+      upcoming: "Coming soon",
+      closed: "Closed",
+    },
   },
 
   detail: {
