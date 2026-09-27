@@ -45,7 +45,7 @@ export const events: EventItem[] = [
   },
   {
     slug: "bvma-member",
-    publishedAt: "2026-09-19",
+    publishedAt: "2026-09-18",
     status: "news",
     display: "logo",
     image: "/images/2026/events/bvma-logo.webp",
@@ -56,6 +56,21 @@ export const events: EventItem[] = [
       summary:
         "Victoria Strings London is now a member of the British Violin Making Association, which brings together makers, restorers, dealers and players of stringed instruments across the United Kingdom.",
       ctaLabel: "Visit the BVMA",
+    },
+  },
+  {
+    slug: "mia-member",
+    publishedAt: "2026-09-19",
+    status: "news",
+    display: "logo",
+    image: "/images/2026/events/mia-logo.webp",
+    imageAlt: "Music Industries Association",
+    ctaHref: "https://www.mia.org.uk/",
+    text: {
+      title: "Member of the MIA",
+      summary:
+        "Victoria Strings London is now a member of the Music Industries Association, the trade body for the UK musical instrument industry, representing retailers, distributors and manufacturers of instruments, equipment and accessories.",
+      ctaLabel: "Visit the MIA",
     },
   },
 ];

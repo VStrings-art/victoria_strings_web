@@ -13,4 +13,10 @@ export const eventsIt: EventTexts = {
       "Victoria Strings London è ora membro della British Violin Making Association, che riunisce liutai, restauratori, commercianti e musicisti ad arco di tutto il Regno Unito.",
     ctaLabel: "Visita la BVMA",
   },
+  "mia-member": {
+    title: "Membri della MIA",
+    summary:
+      "Victoria Strings London è ora membro della Music Industries Association, l'associazione di categoria del settore degli strumenti musicali nel Regno Unito, che rappresenta rivenditori, distributori e produttori di strumenti, attrezzature e accessori.",
+    ctaLabel: "Visita la MIA",
+  },
 };

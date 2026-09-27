@@ -13,4 +13,10 @@ export const eventsKo: EventTexts = {
       "Victoria Strings London은 영국 전역의 현악기 제작자와 복원가, 판매자, 연주자가 모이는 British Violin Making Association(영국 바이올린 제작 협회)의 회원이 되었습니다.",
     ctaLabel: "BVMA 사이트 보기",
   },
+  "mia-member": {
+    title: "MIA 회원이 되었습니다",
+    summary:
+      "Victoria Strings London은 영국 악기 업계의 산업 단체로 악기와 장비, 액세서리의 소매업체와 유통업체, 제조업체가 모이는 Music Industries Association(영국 악기산업협회)의 회원이 되었습니다.",
+    ctaLabel: "MIA 사이트 보기",
+  },
 };
