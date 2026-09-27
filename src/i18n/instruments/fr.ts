@@ -92,6 +92,32 @@ export const instrumentsFr: Record<string, InstrumentText> = {
       "Onde bicolore lumineuse qui capte la lumière en bandes dorées — une présence éclatante, une réponse égale et une voix claire et porteuse.",
   },
 
+  adige: {
+    character: "Chaleureux · Sonore · Généreux",
+    caption:
+      "Flammure largement ondulée sous un vernis brun doré chaleureux, légèrement antiqué — un cœur sonore d'une chaleur généreuse, qui porte sans effort.",
+  },
+  ebro: {
+    character: "Focalisé · Articulé · Égal",
+    caption:
+      "Flammure finement réglée sous un vernis ambre doré limpide — une voix focalisée et articulée, d'une réponse égale sur tous les registres.",
+  },
+  severn: {
+    character: "Doux · Ouvert · Clair",
+    caption:
+      "Ondes discrètes et chatoyantes sous un vernis miel doré lumineux — un timbre doux et ouvert, d'une articulation claire d'un bout à l'autre.",
+  },
+  moselle: {
+    character: "Sombre · Puissant · Souverain",
+    caption:
+      "Flammure serrée et vive qui brûle sous un vernis rouge châtaigne profond — une voix sombre et puissante, d'une profondeur souveraine.",
+  },
+  ticino: {
+    character: "Rond · Équilibré · Clair",
+    caption:
+      "Érable régulièrement flammé, rayonnant sous un vernis orangé doré chaleureux — un timbre rond et équilibré, d'une projection claire et sans effort.",
+  },
+
   como: {
     character: "Doré · Profond · Raffiné",
     caption:

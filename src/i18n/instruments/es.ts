@@ -92,6 +92,32 @@ export const instrumentsEs: Record<string, InstrumentText> = {
       "Luminosa veta bicolor que atrapa la luz en franjas doradas: presencia vívida, respuesta uniforme y una voz brillante que llega lejos.",
   },
 
+  adige: {
+    character: "Cálido · Sonoro · Generoso",
+    caption:
+      "Veteado amplio y ondulante bajo un barniz pardo dorado cálido, ligeramente envejecido — un núcleo sonoro de calidez generosa que proyecta sin esfuerzo.",
+  },
+  ebro: {
+    character: "Focalizado · Articulado · Uniforme",
+    caption:
+      "Veteado fino y regular bajo un nítido barniz ámbar dorado — una voz focalizada y articulada, de respuesta uniforme en todos los registros.",
+  },
+  severn: {
+    character: "Dulce · Abierto · Claro",
+    caption:
+      "Figura discreta y tornasolada bajo un luminoso barniz miel dorado — un timbre dulce y abierto, de articulación clara de principio a fin.",
+  },
+  moselle: {
+    character: "Oscuro · Potente · Rotundo",
+    caption:
+      "Veteado apretado y vigoroso que arde bajo un profundo barniz rojo castaño — una voz oscura y potente, de profundidad rotunda.",
+  },
+  ticino: {
+    character: "Redondo · Equilibrado · Claro",
+    caption:
+      "Arce de veteado uniforme que brilla bajo un cálido barniz dorado anaranjado — un timbre redondo y equilibrado, de proyección clara y sin esfuerzo.",
+  },
+
   como: {
     character: "Dorado · Profundo · Refinado",
     caption:

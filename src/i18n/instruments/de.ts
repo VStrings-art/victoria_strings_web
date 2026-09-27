@@ -91,6 +91,32 @@ export const instrumentsDe: Record<string, InstrumentText> = {
       "Leuchtende zweifarbige Flammung, die das Licht in goldenen Bändern einfängt — lebhafte Präsenz, gleichmäßige Ansprache und eine helle, tragende Stimme.",
   },
 
+  adige: {
+    character: "Warm · Tragend · Großzügig",
+    caption:
+      "Breit gewellte Flammung unter warm goldbraunem Lack, sanft antikisiert — ein tragender Kern von großzügiger Wärme, der mühelos trägt.",
+  },
+  ebro: {
+    character: "Fokussiert · Artikuliert · Ausgeglichen",
+    caption:
+      "Fein gezeichnete Flammung unter klarem bernsteingoldenem Lack — eine fokussierte, artikulierte Stimme mit ausgeglichener Ansprache über alle Lagen.",
+  },
+  severn: {
+    character: "Süß · Offen · Klar",
+    caption:
+      "Zart schimmernde Maserung unter leuchtend honiggoldenem Lack — ein süßer, offener Ton mit klarer Artikulation von unten bis oben.",
+  },
+  moselle: {
+    character: "Dunkel · Kraftvoll · Souverän",
+    caption:
+      "Enge, lebhafte Flammung, die durch tief kastanienroten Lack glüht — eine dunkle, kraftvolle Stimme von souveräner Tiefe und Präsenz.",
+  },
+  ticino: {
+    character: "Rund · Ausgewogen · Klar",
+    caption:
+      "Gleichmäßig geflammter Ahorn, der unter warm goldorangem Lack leuchtet — ein runder, ausgewogener Ton mit klarer, müheloser Tragfähigkeit.",
+  },
+
   como: {
     character: "Golden · Tief · Edel",
     caption:

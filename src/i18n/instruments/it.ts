@@ -92,6 +92,32 @@ export const instrumentsIt: Record<string, InstrumentText> = {
       "Luminosa marezzatura bicolore che cattura la luce in bande dorate — presenza vivida, risposta uniforme e una voce brillante e portante.",
   },
 
+  adige: {
+    character: "Caldo · Sonoro · Generoso",
+    caption:
+      "Marezzatura ampia e ondulata sotto una vernice bruno-dorata calda, lievemente anticata — un nucleo sonoro di calore generoso, che proietta senza sforzo.",
+  },
+  ebro: {
+    character: "Focalizzato · Articolato · Uniforme",
+    caption:
+      "Marezzatura fine e regolare sotto una limpida vernice ambra-oro — una voce focalizzata e articolata, con risposta uniforme in ogni registro.",
+  },
+  severn: {
+    character: "Dolce · Aperto · Chiaro",
+    caption:
+      "Figura discreta e cangiante sotto una luminosa vernice miele-oro — un timbro dolce e aperto, con articolazione chiara da cima a fondo.",
+  },
+  moselle: {
+    character: "Scuro · Potente · Autorevole",
+    caption:
+      "Marezzatura fitta e vigorosa che arde sotto una profonda vernice rosso castagna — una voce scura e potente, di profondità autorevole.",
+  },
+  ticino: {
+    character: "Rotondo · Equilibrato · Chiaro",
+    caption:
+      "Acero uniformemente marezzato che risplende sotto una calda vernice oro-arancio — un timbro rotondo ed equilibrato, con proiezione chiara e senza sforzo.",
+  },
+
   como: {
     character: "Dorato · Profondo · Raffinato",
     caption:
