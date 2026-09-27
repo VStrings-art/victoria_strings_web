@@ -162,6 +162,10 @@ export const ja: Dictionary = {
     violaTitle: "深みと個性が釣り合うヴィオラ",
     celloTitle: "存在感、均整、風格を備えたチェロ",
     bassTitle: "深さと力、確かな造りのコントラバス",
+    previous: "前へ",
+    next: "次へ",
+    /** {n} is replaced with the page number. */
+    pageLabel: "{n} ページ目",
   },
 
   events: {

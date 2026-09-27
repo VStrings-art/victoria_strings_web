@@ -163,6 +163,10 @@ export const de: Dictionary = {
     violaTitle: "Edle Bratschen, ausgewogen in Tiefe und Charakter",
     celloTitle: "Edle Violoncelli mit Präsenz, Balance und Autorität",
     bassTitle: "Kontrabässe mit Tiefe, Kraft und struktureller Stabilität",
+    previous: "Zurück",
+    next: "Weiter",
+    /** {n} is replaced with the page number. */
+    pageLabel: "Seite {n}",
   },
 
   events: {

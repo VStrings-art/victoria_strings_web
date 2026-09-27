@@ -43,6 +43,11 @@ export default function ViolinView({ locale }: { locale: Locale }) {
           title={t.collection.violinTitle}
           basePath="/violin"
           items={items}
+          labels={{
+            previous: t.collection.previous,
+            next: t.collection.next,
+            pageLabel: t.collection.pageLabel,
+          }}
           locale={locale}
         />
       </main>

@@ -162,6 +162,10 @@ export const es: Dictionary = {
     violaTitle: "Violas refinadas, equilibradas en profundidad y carácter",
     celloTitle: "Violonchelos refinados, con presencia, equilibrio y autoridad",
     bassTitle: "Contrabajos con profundidad, potencia e integridad estructural",
+    previous: "Anterior",
+    next: "Siguiente",
+    /** {n} is replaced with the page number. */
+    pageLabel: "Página {n}",
   },
 
   events: {

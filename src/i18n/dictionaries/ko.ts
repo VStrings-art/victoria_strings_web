@@ -162,6 +162,10 @@ export const ko: Dictionary = {
     violaTitle: "깊이와 개성이 균형을 이루는 비올라",
     celloTitle: "존재감과 균형, 품격을 갖춘 첼로",
     bassTitle: "깊이와 힘, 견고한 구조의 콘트라베이스",
+    previous: "이전",
+    next: "다음",
+    /** {n} is replaced with the page number. */
+    pageLabel: "{n} 페이지",
   },
 
   events: {

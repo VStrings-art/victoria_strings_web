@@ -35,6 +35,11 @@ export default function DoubleBassView({ locale }: { locale: Locale }) {
           title={t.collection.bassTitle}
           basePath="/double-bass"
           items={items}
+          labels={{
+            previous: t.collection.previous,
+            next: t.collection.next,
+            pageLabel: t.collection.pageLabel,
+          }}
           locale={locale}
         />
       </main>

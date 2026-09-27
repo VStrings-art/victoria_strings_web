@@ -53,6 +53,11 @@ export default function ViolaView({ locale }: { locale: Locale }) {
           title={t.collection.violaTitle}
           basePath="/viola"
           items={items}
+          labels={{
+            previous: t.collection.previous,
+            next: t.collection.next,
+            pageLabel: t.collection.pageLabel,
+          }}
           locale={locale}
         />
       </main>

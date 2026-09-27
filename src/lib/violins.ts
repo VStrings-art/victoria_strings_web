@@ -4,6 +4,66 @@ export type { Instrument };
 
 export const violins: Instrument[] = [
   {
+    slug: "adige",
+    character: "Warm · Resonant · Generous",
+    title: "Adige",
+    images: [
+      "/images/2026/violins/violin_11/violin11_back.webp",
+      "/images/2026/violins/violin_11/violin11_front.webp",
+      "/images/2026/violins/violin_11/violin11_head.webp",
+    ],
+    caption:
+      "Broadly rippling flame beneath a warm golden-brown varnish, softly antiqued - offering a resonant core with generous warmth and easy carrying power.",
+  },
+  {
+    slug: "ebro",
+    character: "Focused · Articulate · Even",
+    title: "Ebro",
+    images: [
+      "/images/2026/violins/violin_12/violin12_back.webp",
+      "/images/2026/violins/violin_12/violin12_front.webp",
+      "/images/2026/violins/violin_12/violin12_head.webp",
+    ],
+    caption:
+      "Finely ruled flame under a clear amber-gold varnish - producing a focused, articulate voice with even response across every register.",
+  },
+  {
+    slug: "severn",
+    character: "Sweet · Open · Clear",
+    title: "Severn",
+    images: [
+      "/images/2026/violins/violin_13/violin13_back.webp",
+      "/images/2026/violins/violin_13/violin13_front.webp",
+      "/images/2026/violins/violin_13/violin13_head.webp",
+    ],
+    caption:
+      "Quietly shimmering figure beneath a luminous honey-gold varnish - giving a sweet, open tone with clear articulation from end to end.",
+  },
+  {
+    slug: "moselle",
+    character: "Dark · Powerful · Commanding",
+    title: "Moselle",
+    images: [
+      "/images/2026/violins/violin_14/violin14_back.webp",
+      "/images/2026/violins/violin_14/violin14_front.webp",
+      "/images/2026/violins/violin_14/violin14_head.webp",
+    ],
+    caption:
+      "Tight, vigorous flame burning through a deep chestnut-red varnish - delivering a dark, powerful voice with commanding depth and presence.",
+  },
+  {
+    slug: "ticino",
+    character: "Rounded · Balanced · Clear",
+    title: "Ticino",
+    images: [
+      "/images/2026/violins/violin_15/violin15_back.webp",
+      "/images/2026/violins/violin_15/violin15_front.webp",
+      "/images/2026/violins/violin_15/violin15_head.webp",
+    ],
+    caption:
+      "Evenly flamed maple glowing under a warm golden-orange varnish - offering a rounded, balanced tone with clear, effortless projection.",
+  },
+  {
     slug: "danube",
     character: "Rich · Focused · Confident",
     title: "Danube",
@@ -215,66 +275,6 @@ export const violins: Instrument[] = [
     ],
     caption:
       "Luminous two-tone flame catching the light in golden bands - offering vivid presence, even response, and a bright, carrying voice.",
-  },
-  {
-    slug: "adige",
-    character: "Warm · Resonant · Generous",
-    title: "Adige",
-    images: [
-      "/images/2026/violins/violin_11/violin11_back.webp",
-      "/images/2026/violins/violin_11/violin11_front.webp",
-      "/images/2026/violins/violin_11/violin11_head.webp",
-    ],
-    caption:
-      "Broadly rippling flame beneath a warm golden-brown varnish, softly antiqued - offering a resonant core with generous warmth and easy carrying power.",
-  },
-  {
-    slug: "ebro",
-    character: "Focused · Articulate · Even",
-    title: "Ebro",
-    images: [
-      "/images/2026/violins/violin_12/violin12_back.webp",
-      "/images/2026/violins/violin_12/violin12_front.webp",
-      "/images/2026/violins/violin_12/violin12_head.webp",
-    ],
-    caption:
-      "Finely ruled flame under a clear amber-gold varnish - producing a focused, articulate voice with even response across every register.",
-  },
-  {
-    slug: "severn",
-    character: "Sweet · Open · Clear",
-    title: "Severn",
-    images: [
-      "/images/2026/violins/violin_13/violin13_back.webp",
-      "/images/2026/violins/violin_13/violin13_front.webp",
-      "/images/2026/violins/violin_13/violin13_head.webp",
-    ],
-    caption:
-      "Quietly shimmering figure beneath a luminous honey-gold varnish - giving a sweet, open tone with clear articulation from end to end.",
-  },
-  {
-    slug: "moselle",
-    character: "Dark · Powerful · Commanding",
-    title: "Moselle",
-    images: [
-      "/images/2026/violins/violin_14/violin14_back.webp",
-      "/images/2026/violins/violin_14/violin14_front.webp",
-      "/images/2026/violins/violin_14/violin14_head.webp",
-    ],
-    caption:
-      "Tight, vigorous flame burning through a deep chestnut-red varnish - delivering a dark, powerful voice with commanding depth and presence.",
-  },
-  {
-    slug: "ticino",
-    character: "Rounded · Balanced · Clear",
-    title: "Ticino",
-    images: [
-      "/images/2026/violins/violin_15/violin15_back.webp",
-      "/images/2026/violins/violin_15/violin15_front.webp",
-      "/images/2026/violins/violin_15/violin15_head.webp",
-    ],
-    caption:
-      "Evenly flamed maple glowing under a warm golden-orange varnish - offering a rounded, balanced tone with clear, effortless projection.",
   },
 ];
 

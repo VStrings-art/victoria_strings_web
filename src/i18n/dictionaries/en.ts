@@ -159,6 +159,10 @@ export const en = {
     violaTitle: "Refined Violas, Balanced in Depth and Character",
     celloTitle: "Refined Cellos with Presence, Balance & Authority",
     bassTitle: "Double Basses with Depth, Power & Structural Integrity",
+    previous: "Previous",
+    next: "Next",
+    /** {n} is replaced with the page number. */
+    pageLabel: "Page {n}",
   },
 
   events: {

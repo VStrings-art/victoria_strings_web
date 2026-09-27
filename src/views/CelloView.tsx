@@ -32,6 +32,11 @@ export default function CelloView({ locale }: { locale: Locale }) {
           title={t.collection.celloTitle}
           basePath="/cello"
           items={items}
+          labels={{
+            previous: t.collection.previous,
+            next: t.collection.next,
+            pageLabel: t.collection.pageLabel,
+          }}
           locale={locale}
         />
       </main>
