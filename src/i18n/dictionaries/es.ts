@@ -81,8 +81,8 @@ export const es: Dictionary = {
     vsLabel: "La colección profesional",
     vsBody:
       "Instrumentos de alta gama creados junto a maestros luthiers de todo el mundo, destinados a músicos profesionales.",
-    primaLabel: "La colección de estudio avanzado",
-    primaBody:
+    venusLabel: "La colección de estudio avanzado",
+    venusBody:
       "Nuestra marca dedicada a los instrumentos de nivel de estudio avanzado: calidad seria para intérpretes en formación, estudiantes y docentes.",
     footnote:
       "Acompañamos a músicos, docentes, estudiantes, escuelas, instituciones, orquestas y tiendas especializadas: de la prueba a la venta, de la entrega al servicio posventa.",

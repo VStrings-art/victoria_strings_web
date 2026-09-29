@@ -78,8 +78,8 @@ export const en = {
     vsLabel: "The Professional Collection",
     vsBody:
       "Fine instruments created in collaboration with individual master luthiers around the world — made for professional musicians.",
-    primaLabel: "The Advanced Student Collection",
-    primaBody:
+    venusLabel: "The Advanced Student Collection",
+    venusBody:
       "Our dedicated brand for advanced student-level instruments — serious quality for progressing players, students and teachers.",
     footnote:
       "Supporting musicians, teachers, students, schools, institutions, orchestras and retailers — through trials, sales, delivery and after-sales care.",

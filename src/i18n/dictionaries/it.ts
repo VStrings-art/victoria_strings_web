@@ -81,8 +81,8 @@ export const it: Dictionary = {
     vsLabel: "La collezione professionale",
     vsBody:
       "Strumenti di pregio realizzati in collaborazione con singoli maestri liutai in tutto il mondo — destinati ai musicisti professionisti.",
-    primaLabel: "La collezione per allievi avanzati",
-    primaBody:
+    venusLabel: "La collezione per allievi avanzati",
+    venusBody:
       "Il nostro marchio dedicato agli strumenti di livello avanzato di studio — qualità seria per allievi in crescita, studenti e insegnanti.",
     footnote:
       "Affianchiamo musicisti, insegnanti, studenti, scuole, istituzioni, orchestre e rivenditori — dalla prova alla vendita, dalla consegna all'assistenza successiva.",

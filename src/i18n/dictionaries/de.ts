@@ -81,8 +81,8 @@ export const de: Dictionary = {
     vsLabel: "Die Professional Collection",
     vsBody:
       "Edle Instrumente, die in Zusammenarbeit mit einzelnen Meistergeigenbauern weltweit entstehen — gebaut für Berufsmusikerinnen und -musiker.",
-    primaLabel: "Die Advanced Student Collection",
-    primaBody:
+    venusLabel: "Die Advanced Student Collection",
+    venusBody:
       "Unsere eigene Marke für Instrumente auf fortgeschrittenem Ausbildungsniveau — ernsthafte Qualität für Studierende, Lernende und Lehrende.",
     footnote:
       "Wir begleiten Musikerinnen und Musiker, Lehrende, Studierende, Schulen, Institutionen, Orchester und den Fachhandel — von der Probezeit über den Kauf und die Lieferung bis zur Betreuung danach.",

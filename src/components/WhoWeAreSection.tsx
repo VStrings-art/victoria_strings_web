@@ -20,13 +20,17 @@ export default function WhoWeAreSection({ locale = "en" }: { locale?: Locale }) 
             href={localePath(locale, "/violin")}
             className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 py-14 text-center transition-colors duration-200 hover:border-gold-500/50 hover:bg-white/[0.07]"
           >
-            <Image
-              src="/images/vs-logo-cropped.webp"
-              alt="Victoria Strings London"
-              width={400}
-              height={213}
-              className="h-auto w-full max-w-[300px] object-contain"
-            />
+            {/* The two marks are different shapes — one wide, one stacked — so
+                a shared box sizes them by height and keeps the labels level. */}
+            <div className="flex h-[180px] items-center justify-center">
+              <Image
+                src="/images/vs-logo-cropped.webp"
+                alt="Victoria Strings London"
+                width={400}
+                height={213}
+                className="h-auto max-h-full w-auto max-w-[300px] object-contain"
+              />
+            </div>
             <p className="mt-8 text-sm font-semibold tracking-[0.2em] text-gold-400 uppercase">
               {t.whoWeAre.vsLabel}
             </p>
@@ -36,23 +40,25 @@ export default function WhoWeAreSection({ locale = "en" }: { locale?: Locale }) 
           </Link>
 
           <a
-            href="https://primalondon.com"
+            href="https://www.venusstrings.com"
             target="_blank"
             rel="noreferrer"
             className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 py-14 text-center transition-colors duration-200 hover:border-gold-500/50 hover:bg-white/[0.07]"
           >
-            <Image
-              src="/images/prima-logo.webp"
-              alt="Prima London"
-              width={400}
-              height={225}
-              className="h-auto w-full max-w-[300px] object-contain"
-            />
+            <div className="flex h-[180px] items-center justify-center">
+              <Image
+                src="/images/venus-logo.webp"
+                alt="Venus Strings London"
+                width={608}
+                height={600}
+                className="h-auto max-h-full w-auto max-w-[300px] object-contain"
+              />
+            </div>
             <p className="mt-8 text-sm font-semibold tracking-[0.2em] text-gold-400 uppercase">
-              {t.whoWeAre.primaLabel}
+              {t.whoWeAre.venusLabel}
             </p>
             <p className="mt-5 max-w-sm text-[1.05rem] leading-[1.7] text-ink-200">
-              {t.whoWeAre.primaBody}
+              {t.whoWeAre.venusBody}
             </p>
           </a>
         </div>

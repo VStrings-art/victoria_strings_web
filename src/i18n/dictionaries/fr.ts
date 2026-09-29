@@ -81,8 +81,8 @@ export const fr: Dictionary = {
     vsLabel: "La collection professionnelle",
     vsBody:
       "Des instruments d'exception réalisés en collaboration avec des maîtres luthiers du monde entier — destinés aux musiciens professionnels.",
-    primaLabel: "La collection élèves avancés",
-    primaBody:
+    venusLabel: "La collection élèves avancés",
+    venusBody:
       "Notre marque dédiée aux instruments d'étude de niveau avancé — une qualité sérieuse pour les élèves en progression et leurs professeurs.",
     footnote:
       "Nous accompagnons musiciens, professeurs, élèves, écoles, institutions, orchestres et revendeurs — de l'essai à la vente, de la livraison au suivi après-vente.",
