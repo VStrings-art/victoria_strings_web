@@ -64,7 +64,7 @@ export default function WhoWeAreSection({ locale = "en" }: { locale?: Locale }) 
             {/* Answers the asterisk above, and stays inside the card so the
                 aside belongs to Venus rather than to the pair. mt-auto pins it
                 to the foot of whichever card the grid stretches taller. */}
-            <p className="mt-auto max-w-sm pt-8 text-[0.86rem] leading-[1.6] text-ink-400">
+            <p className="mt-auto max-w-[30rem] pt-8 text-[0.95rem] leading-[1.65] text-ink-400">
               {t.whoWeAre.venusFormerly}
             </p>
           </a>
