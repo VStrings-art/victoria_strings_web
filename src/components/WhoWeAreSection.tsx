@@ -56,6 +56,7 @@ export default function WhoWeAreSection({ locale = "en" }: { locale?: Locale }) 
             </div>
             <p className="mt-8 text-sm font-semibold tracking-[0.2em] text-gold-400 uppercase">
               {t.whoWeAre.venusLabel}
+              <span className="ml-0.5 align-super text-[0.75em]">*</span>
             </p>
             <p className="mt-5 max-w-sm text-[1.05rem] leading-[1.7] text-ink-200">
               {t.whoWeAre.venusBody}
@@ -63,7 +64,13 @@ export default function WhoWeAreSection({ locale = "en" }: { locale?: Locale }) 
           </a>
         </div>
 
-        <p className="mt-14 text-center text-[1.05rem] text-ink-300">
+        {/* Keyed to the asterisk on the Venus card: the brand traded as Prima
+            until 2026, and returning visitors will be looking for that name. */}
+        <p className="mt-8 text-center text-[0.92rem] text-ink-400">
+          {t.whoWeAre.venusFormerly}
+        </p>
+
+        <p className="mt-10 text-center text-[1.05rem] text-ink-300">
           {t.whoWeAre.footnote}
         </p>
       </div>

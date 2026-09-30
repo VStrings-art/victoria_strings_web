@@ -84,6 +84,7 @@ export const it: Dictionary = {
     venusLabel: "La collezione per allievi avanzati",
     venusBody:
       "Il nostro marchio dedicato agli strumenti di livello avanzato di studio — qualità seria per allievi in crescita, studenti e insegnanti.",
+    venusFormerly: "* Venus Strings si chiamava in precedenza Prima London.",
     footnote:
       "Affianchiamo musicisti, insegnanti, studenti, scuole, istituzioni, orchestre e rivenditori — dalla prova alla vendita, dalla consegna all'assistenza successiva.",
   },

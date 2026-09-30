@@ -84,6 +84,7 @@ export const ja: Dictionary = {
     venusLabel: "アドヴァンスト・スチューデント・コレクション",
     venusBody:
       "上級学習者向けの楽器に特化した専用ブランド。伸び盛りの奏者、学生、指導者に応える確かな品質です。",
+    venusFormerly: "* Venus Strings は旧名称を Prima London といいます。",
     footnote:
       "演奏家、指導者、学生、学校、教育機関、オーケストラ、販売店の皆さまを、試奏から購入、発送、その後のメンテナンスまでお支えします。",
   },

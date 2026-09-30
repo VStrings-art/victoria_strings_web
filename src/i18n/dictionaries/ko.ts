@@ -84,6 +84,7 @@ export const ko: Dictionary = {
     venusLabel: "어드밴스드 스튜던트 컬렉션",
     venusBody:
       "상급 학습자용 악기에 전념하는 전용 브랜드입니다. 성장하는 연주자와 학생, 지도자를 위한 확실한 품질을 갖췄습니다.",
+    venusFormerly: "* Venus Strings의 이전 이름은 Prima London입니다.",
     footnote:
       "연주자, 지도자, 학생, 학교, 기관, 오케스트라, 전문 판매점을 시연부터 구매와 배송, 이후의 관리까지 함께합니다.",
   },
