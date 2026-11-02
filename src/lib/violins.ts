@@ -111,30 +111,6 @@ export const violins: Instrument[] = [
     caption: "A clean, elegant voice - built to carry effortlessly in any hall.",
   },
   {
-    slug: "rhine",
-    character: "Warm · Deep · Authoritative",
-    title: "Rhine",
-    images: [
-      "/images/2025/11/bao_A_b.webp",
-      "/images/2025/11/bao_A_f.webp",
-      "/images/2025/11/bao_A_s.webp",
-    ],
-    caption:
-      "A luminous, flame-maple silhouette crowned in golden varnish - crafted to project with warmth, depth, and effortless authority.",
-  },
-  {
-    slug: "tiber",
-    character: "Radiant · Warm · Clear",
-    title: "Tiber",
-    images: [
-      "/images/2025/11/Screenshot-2025-11-15-at-18.59.27-scaled.webp",
-      "/images/2025/11/Screenshot-2025-11-15-at-19.30.45.webp",
-      "/images/2025/11/kuang_s.webp",
-    ],
-    caption:
-      "Radiant golden maple with elegant antiquing, delivering warm depth, focused clarity, and confident projection across every register.",
-  },
-  {
     slug: "arno",
     character: "Refined · Balanced · Elegant",
     title: "Arno",
@@ -169,17 +145,6 @@ export const violins: Instrument[] = [
     ],
     caption:
       "Golden maple flame shimmers beneath a warm, translucent varnish, revealing refined craftsmanship and elegant, balanced character.",
-  },
-  {
-    slug: "neva",
-    character: "Brilliant · Luminous · Refined",
-    title: "Neva",
-    images: [
-      "/images/2025/11/ping_f.webp",
-      "/images/2026/03/messiah4_back.webp",
-      "/images/2025/11/ping_s.webp",
-    ],
-    caption: "Brilliant flamed maple back with rich, luminous depth and refined elegance.",
   },
   {
     slug: "tagus",

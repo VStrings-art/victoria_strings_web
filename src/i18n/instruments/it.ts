@@ -21,16 +21,6 @@ export const instrumentsIt: Record<string, InstrumentText> = {
     character: "Nitido · Elegante · Portante",
     caption: "Una voce nitida ed elegante, fatta per arrivare senza sforzo in qualunque sala.",
   },
-  rhine: {
-    character: "Caldo · Profondo · Autorevole",
-    caption:
-      "Una silhouette luminosa di acero marezzato coronata da vernice dorata — costruita per proiettare con calore, profondità e naturale autorevolezza.",
-  },
-  tiber: {
-    character: "Radioso · Caldo · Nitido",
-    caption:
-      "Acero dorato radioso con elegante anticatura — profondità calda, chiarezza focalizzata e proiezione sicura su tutta l'estensione.",
-  },
   arno: {
     character: "Raffinato · Equilibrato · Elegante",
     caption:
@@ -45,11 +35,6 @@ export const instrumentsIt: Record<string, InstrumentText> = {
     character: "Traslucido · Raffinato · Elegante",
     caption:
       "La marezzatura dorata dell'acero brilla sotto una vernice calda e traslucida, rivelando una liuteria raffinata e un carattere elegante ed equilibrato.",
-  },
-  neva: {
-    character: "Brillante · Luminoso · Raffinato",
-    caption:
-      "Fondo d'acero dalla marezzatura brillante, di profondità ricca e luminosa e raffinata eleganza.",
   },
   tagus: {
     character: "Vibrante · Pieno · Focalizzato",

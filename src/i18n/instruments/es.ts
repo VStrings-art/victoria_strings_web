@@ -21,16 +21,6 @@ export const instrumentsEs: Record<string, InstrumentText> = {
     character: "Limpio · Elegante · Portador",
     caption: "Una voz limpia y elegante, construida para llegar sin esfuerzo en cualquier sala.",
   },
-  rhine: {
-    character: "Cálido · Profundo · Rotundo",
-    caption:
-      "Una silueta luminosa de arce flameado coronada por un barniz dorado, construida para proyectar con calidez, profundidad y una autoridad natural.",
-  },
-  tiber: {
-    character: "Radiante · Cálido · Nítido",
-    caption:
-      "Arce dorado radiante con un envejecido elegante: profundidad cálida, claridad focalizada y proyección segura en todo el registro.",
-  },
   arno: {
     character: "Refinado · Equilibrado · Elegante",
     caption:
@@ -45,11 +35,6 @@ export const instrumentsEs: Record<string, InstrumentText> = {
     character: "Translúcido · Refinado · Elegante",
     caption:
       "La veta dorada del arce brilla bajo un barniz cálido y translúcido, revelando una construcción refinada y un carácter elegante y equilibrado.",
-  },
-  neva: {
-    character: "Brillante · Luminoso · Refinado",
-    caption:
-      "Fondo de arce de veta brillante, de profundidad rica y luminosa y elegancia refinada.",
   },
   tagus: {
     character: "Vibrante · Amplio · Focalizado",

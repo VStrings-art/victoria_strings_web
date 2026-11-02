@@ -120,7 +120,7 @@ export default function CollectionSection({
       {paged && (
         <nav
           aria-label={label}
-          className="mx-auto flex max-w-[1560px] flex-wrap items-center justify-center gap-x-3 gap-y-4 px-6 pb-20 font-sans text-[0.68rem] font-semibold tracking-[0.2em] uppercase sm:gap-x-5 sm:text-[0.72rem]"
+          className="mx-auto flex max-w-[1560px] flex-wrap items-center justify-center gap-x-4 gap-y-4 px-6 pb-20 font-sans text-[0.82rem] font-semibold tracking-[0.2em] uppercase sm:gap-x-6 sm:text-[0.88rem]"
         >
           <button
             type="button"
@@ -139,7 +139,7 @@ export default function CollectionSection({
                 onClick={() => go(i)}
                 aria-current={i === page ? "page" : undefined}
                 aria-label={labels.pageLabel.replace("{n}", String(i + 1))}
-                className="group/page px-2.5 py-1.5 text-[#a08b73] transition-colors duration-200 ease-out hover:text-[#a97f34] aria-[current=page]:text-[#1f1b18]"
+                className="group/page px-3 py-1.5 text-[#a08b73] transition-colors duration-200 ease-out hover:text-[#a97f34] aria-[current=page]:text-[#1f1b18]"
               >
                 {i + 1}
                 <span className="mx-auto mt-1.5 block h-px w-full scale-x-0 bg-[#c9ab7c] transition-transform duration-200 ease-out group-aria-[current=page]/page:scale-x-100" />

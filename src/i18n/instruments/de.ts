@@ -21,16 +21,6 @@ export const instrumentsDe: Record<string, InstrumentText> = {
     character: "Klar · Elegant · Tragend",
     caption: "Eine klare, elegante Stimme — gebaut, um in jedem Saal mühelos zu tragen.",
   },
-  rhine: {
-    character: "Warm · Tief · Autoritär",
-    caption:
-      "Eine leuchtende Silhouette aus geflammtem Ahorn, gekrönt von goldenem Lack — gebaut, um mit Wärme, Tiefe und müheloser Autorität zu tragen.",
-  },
-  tiber: {
-    character: "Strahlend · Warm · Klar",
-    caption:
-      "Strahlend goldener Ahorn mit eleganter Antikisierung — warme Tiefe, fokussierte Klarheit und sichere Tragfähigkeit über alle Lagen.",
-  },
   arno: {
     character: "Edel · Ausgewogen · Elegant",
     caption:
@@ -45,10 +35,6 @@ export const instrumentsDe: Record<string, InstrumentText> = {
     character: "Transluzent · Edel · Elegant",
     caption:
       "Goldene Ahornflammen schimmern unter einem warmen, transluzenten Lack und geben feine Handwerkskunst und einen eleganten, ausgewogenen Charakter preis.",
-  },
-  neva: {
-    character: "Brillant · Leuchtend · Edel",
-    caption: "Brillant geflammter Ahornboden von satter, leuchtender Tiefe und edler Eleganz.",
   },
   tagus: {
     character: "Lebendig · Warm · Fokussiert",

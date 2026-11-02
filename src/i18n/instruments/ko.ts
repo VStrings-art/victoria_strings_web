@@ -21,16 +21,6 @@ export const instrumentsKo: Record<string, InstrumentText> = {
     character: "맑음 · 우아함 · 멀리 닿는",
     caption: "맑고 우아한 목소리 — 어느 홀에서든 힘들이지 않고 닿도록 만들었습니다.",
   },
-  rhine: {
-    character: "따뜻함 · 깊이 · 품격",
-    caption:
-      "호랑이 무늬 단풍나무의 빛나는 자태를 금빛 바니시가 감쌉니다. 따뜻함과 깊이, 그리고 자연스러운 품격으로 소리를 전합니다.",
-  },
-  tiber: {
-    character: "찬란함 · 따뜻함 · 명료함",
-    caption:
-      "찬란한 금빛 단풍나무에 기품 있는 앤티크 마감. 따뜻한 깊이와 또렷한 명료함, 모든 음역에서의 확신 있는 전달력.",
-  },
   arno: {
     character: "세련됨 · 균형 · 우아함",
     caption:
@@ -45,10 +35,6 @@ export const instrumentsKo: Record<string, InstrumentText> = {
     character: "투명함 · 세련됨 · 우아함",
     caption:
       "따뜻하고 투명한 바니시 아래에서 금빛 무늬가 일렁이며, 정교한 만듦새와 우아하고 균형 잡힌 성격을 드러냅니다.",
-  },
-  neva: {
-    character: "눈부심 · 빛남 · 세련됨",
-    caption: "눈부신 호랑이 무늬 뒷판. 풍부하고 빛나는 깊이와 세련된 우아함을 품었습니다.",
   },
   tagus: {
     character: "생기 · 풍부함 · 또렷함",

@@ -21,16 +21,6 @@ export const instrumentsFr: Record<string, InstrumentText> = {
     character: "Net · Élégant · Porteur",
     caption: "Une voix nette et élégante — faite pour porter sans effort dans n'importe quelle salle.",
   },
-  rhine: {
-    character: "Chaud · Profond · Souverain",
-    caption:
-      "Une silhouette lumineuse d'érable ondé couronnée d'un vernis doré — conçue pour projeter avec chaleur, profondeur et une autorité naturelle.",
-  },
-  tiber: {
-    character: "Rayonnant · Chaud · Clair",
-    caption:
-      "Érable doré rayonnant au vieillissement élégant — une profondeur chaleureuse, une clarté concentrée et une projection assurée sur tous les registres.",
-  },
   arno: {
     character: "Raffiné · Équilibré · Élégant",
     caption:
@@ -45,11 +35,6 @@ export const instrumentsFr: Record<string, InstrumentText> = {
     character: "Translucide · Raffiné · Élégant",
     caption:
       "L'onde dorée de l'érable scintille sous un vernis chaud et translucide, révélant une facture raffinée et un caractère élégant et équilibré.",
-  },
-  neva: {
-    character: "Brillant · Lumineux · Raffiné",
-    caption:
-      "Fond d'érable à l'onde brillante, d'une profondeur riche et lumineuse et d'une élégance raffinée.",
   },
   tagus: {
     character: "Vif · Ample · Concentré",

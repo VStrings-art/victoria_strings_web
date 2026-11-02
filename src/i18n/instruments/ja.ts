@@ -21,16 +21,6 @@ export const instrumentsJa: Record<string, InstrumentText> = {
     character: "澄んだ ・ 端正 ・ よく通る",
     caption: "澄んだ端正な声。どんなホールでも無理なく通るように造られています。",
   },
-  rhine: {
-    character: "温かい ・ 深い ・ 風格",
-    caption:
-      "虎杢メイプルの輝く姿を金色のニスが包みます。温かさと深み、そして自然な風格をもって音を届けます。",
-  },
-  tiber: {
-    character: "輝き ・ 温かい ・ 明晰",
-    caption:
-      "輝く金色のメイプルに品のあるアンティーク仕上げ。温かな深みと芯のある明晰さ、全音域での確かな音の飛び。",
-  },
   arno: {
     character: "洗練 ・ 均整 ・ 優美",
     caption:
@@ -45,10 +35,6 @@ export const instrumentsJa: Record<string, InstrumentText> = {
     character: "透明感 ・ 洗練 ・ 優美",
     caption:
       "温かく透き通るニスの下で金色の虎杢が揺らめき、丁寧な仕事と優美で均整のとれた性格を映し出します。",
-  },
-  neva: {
-    character: "鮮烈 ・ 輝き ・ 洗練",
-    caption: "鮮やかな虎杢の裏板。豊かで輝きのある深みと、洗練された優美さを湛えています。",
   },
   tagus: {
     character: "生気 ・ 豊か ・ 芯がある",
