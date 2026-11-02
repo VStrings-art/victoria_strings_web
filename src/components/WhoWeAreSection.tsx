@@ -49,7 +49,7 @@ export default function WhoWeAreSection({ locale = "en" }: { locale?: Locale }) 
               <Image
                 src="/images/venus-logo.webp"
                 alt="Venus Strings London"
-                width={608}
+                width={680}
                 height={600}
                 className="h-auto max-h-full w-auto max-w-[300px] object-contain"
               />
